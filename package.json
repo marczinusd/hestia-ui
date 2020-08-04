@@ -34,6 +34,7 @@
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "@cypress/webpack-preprocessor": "5.4.2",
+    "@ngneat/spectator": "^5.13.0",
     "@types/jest": "^26.0.8",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
