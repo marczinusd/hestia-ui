@@ -7,6 +7,7 @@
     "build": "ng build",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll",
     "lint": "ng lint && eslint . --ext .ts,.json --ignore-pattern node_modules/",
     "e2e": "cypress open",
     "e2e:ci": "start-server-and-test start http-get://localhost:4200 cy:run",
