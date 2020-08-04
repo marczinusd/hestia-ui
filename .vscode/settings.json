@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "node_modules/": true,
+    "coverage/": true,
+    "dist/": true,
+    "cypress/screenshots": true,
+    "cypress/videos": true
+  }
+}
