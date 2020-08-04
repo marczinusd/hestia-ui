@@ -13,24 +13,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x]
-
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '14.x'
       - name: Restore dependencies
         run: npm ci
       - name: Run linters
         run: npm run lint
       - name: Run unit tests and verify coverage
         run: npm run test:coverage
-      - name: Run e2e tests
-        run: npm run e2e:ci
       - name: Upload coverage report to codecov
         uses: codecov/codecov-action@v1.0.12
         with:

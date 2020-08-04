@@ -1,4 +1,7 @@
-# HestiaUi
+# Hestia UI
+
+![master build](https://github.com/marczinusd/hestia-ui/workflows/Build%20and%20test/badge.svg)
+[![codecov](https://codecov.io/gh/marczinusd/hestia-ui/branch/master/graph/badge.svg)](https://codecov.io/gh/marczinusd/hestia-ui)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
