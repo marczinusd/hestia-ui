@@ -8,7 +8,10 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "cypress open",
+    "e2e:ci": "start-server-and-test ci:serve http://localhost:4200 cy:run",
+    "ci:serve": "ng build && http-server dist -p 4200",
+    "cy:run": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -33,8 +36,10 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "cypress": "4.12.0",
+    "http-server": "^0.12.3",
     "jest": "^26.2.2",
     "jest-preset-angular": "^8.2.1",
+    "start-server-and-test": "^1.11.2",
     "ts-loader": "8.0.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
