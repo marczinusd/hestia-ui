@@ -20,6 +20,8 @@ jobs:
         with:
           node-version: '14.x'
       - name: Restore dependencies
+        env:
+          CYPRESS_INSTALL_BINARY: 0
         run: npm ci
       - name: Run linters
         run: npm run lint
