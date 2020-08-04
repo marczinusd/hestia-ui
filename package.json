@@ -102,13 +102,12 @@
     }
   },
   "lint-staged": {
-    "*.{json}": [
-      "eslint --cache --fix",
-      "tslint --fix",
+    "*.json": [
+      "eslint --fix",
       "prettier --write"
     ],
     "*.{ts,js}": [
-      "eslint --cache --fix",
+      "eslint --fix",
       "tslint --fix",
       "prettier --write"
     ],
