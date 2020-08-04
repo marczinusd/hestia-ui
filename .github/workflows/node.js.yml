@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +23,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run test:coverage
-      - run: npm run e2e:ci
+      - name: Restore dependencies
+        run: npm ci
+      - name: Run linters
+        run: npm run lint
+      - name: Run unit tests and verify coverage
+        run: npm run test:coverage
+      - name: Run e2e tests
+        run: npm run e2e:ci
