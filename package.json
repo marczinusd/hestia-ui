@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "jest --maxWorkers=1",
+    "test:coverage": "jest --coverage --maxWorkers=1",
     "test:watch": "jest --watchAll",
     "lint": "ng lint && eslint . --ext .ts,.json --ignore-pattern node_modules/",
     "lint:fix": "tslint --fix -c tslint.json --project tsconfig.json && eslint . --ext .ts,.json --ignore-pattern node_modules/ --fix",
@@ -93,6 +93,7 @@
       "ts-jest": {
         "tsConfig": "<rootDir>/tsconfig.spec.json",
         "stringifyContentPathRegex": "\\.html$",
+        "isolatedModules": true,
         "diagnostics": {
           "ignoreCodes": [
             151001
