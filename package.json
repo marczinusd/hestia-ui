@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint": "ng lint && eslint . --ext .ts,.json,.component.html --ignore-pattern node_modules/",
+    "lint": "ng lint && eslint . --ext .ts,.json --ignore-pattern node_modules/",
     "e2e": "cypress open",
     "e2e:ci": "start-server-and-test start http-get://localhost:4200 cy:run",
     "cy:run": "cypress run"
@@ -30,6 +30,8 @@
     "@angular-devkit/build-angular": "~0.1000.5",
     "@angular/cli": "~10.0.5",
     "@angular/compiler-cli": "~10.0.6",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "@cypress/webpack-preprocessor": "5.4.2",
     "@types/jest": "^26.0.8",
     "@types/node": "^12.11.1",
@@ -39,8 +41,10 @@
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
     "jest": "^26.2.2",
     "jest-preset-angular": "^8.2.1",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
     "start-server-and-test": "^1.11.2",
@@ -89,5 +93,25 @@
         }
       }
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{json}": [
+      "eslint --cache --fix",
+      "tslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,js}": [
+      "eslint --cache --fix",
+      "tslint --fix",
+      "prettier --write"
+    ],
+    "*.{md,html,css,scss}": "prettier --write"
   }
 }
