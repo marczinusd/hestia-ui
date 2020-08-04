@@ -72,6 +72,7 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "<rootDir>/src/app/**/*.ts",
+      "!<rootDir>/src/app/fakes/*.ts",
       "!<rootDir>/src/app/**/*.module.ts",
       "!<rootDir>/node_modules/",
       "!**/*.d.ts"
