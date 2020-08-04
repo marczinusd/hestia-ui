@@ -64,8 +64,10 @@
       "<rootDir>/src/test.ts",
       "<rootDir>/cypress/"
     ],
+    "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**/*.{ts}",
+      "<rootDir>/src/app/**/*.ts",
+      "!<rootDir>/src/app/**/*.module.ts",
       "!<rootDir>/node_modules/",
       "!**/*.d.ts"
     ],
@@ -97,7 +99,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm test",
+      "pre-push": "npm run test:coverage",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
