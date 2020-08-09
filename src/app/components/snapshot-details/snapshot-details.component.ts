@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SnapshotsService } from '../../services/snapshots.service';
+import { Snapshot } from '../../model/snapshot';
 
 @Component({
   selector: 'app-snapshot-details',
@@ -7,13 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./snapshot-details.component.scss']
 })
 export class SnapshotDetailsComponent implements OnInit {
-  id: number;
+  snapshot: Snapshot;
 
-  constructor(private route: ActivatedRoute) {
-    this.id = 0;
-  }
+  constructor(private route: ActivatedRoute, private service: SnapshotsService) {}
 
   ngOnInit(): void {
-    this.id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.snapshot = this.service.getSnapshotDetails(id);
   }
 }
