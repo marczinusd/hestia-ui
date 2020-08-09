@@ -27,5 +27,7 @@
     },
     "editor.formatOnSave": false
   },
-  "cSpell.words": ["primeng"]
+  "tslint.rulesDirectory": "./node_modules/codelyzer",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "cSpell.words": ["ngneat", "primeng"]
 }
