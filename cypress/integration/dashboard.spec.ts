@@ -3,5 +3,5 @@ beforeEach(() => {
 });
 
 it('shows snapshots header', () => {
-  cy.contains('Your repositories');
+  cy.contains('Your snapshots');
 });
