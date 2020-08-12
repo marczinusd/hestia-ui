@@ -1,5 +1,4 @@
 import { RouterTestingModule } from '@angular/router/testing';
-import { MenubarModule } from 'primeng/menubar';
 import { Spectator, createComponentFactory } from '@ngneat/spectator';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -8,7 +7,7 @@ describe('AppComponent', () => {
   let spectator: Spectator<AppComponent>;
   const createComponent = createComponentFactory({
     component: AppComponent,
-    imports: [RouterTestingModule, MenubarModule],
+    imports: [RouterTestingModule],
     declarations: [HeaderComponent]
   });
 
