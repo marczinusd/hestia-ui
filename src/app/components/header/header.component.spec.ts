@@ -23,6 +23,6 @@ describe('HeaderComponent', () => {
   });
 
   it('should render app title', () => {
-    expect(spectator.query('span').textContent).toBe('Hestia');
+    expect(spectator.query('h1').textContent).toBe('Hestia');
   });
 });
