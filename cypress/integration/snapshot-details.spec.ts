@@ -1,7 +1,9 @@
-beforeEach(() => {
-  cy.visit('/snapshots/1');
-});
+describe('Snapshot Details', () => {
+  beforeEach(() => {
+    cy.visit('/snapshots/1');
+  });
 
-it('loads the correct snapshot details', () => {
-  cy.contains('snapshot-details for 1').should('exist');
+  it('loads the correct snapshot details', () => {
+    cy.contains('snapshot-details for 1').should('exist');
+  });
 });
