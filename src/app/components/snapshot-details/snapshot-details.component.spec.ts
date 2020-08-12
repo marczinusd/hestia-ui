@@ -1,5 +1,5 @@
 import { SnapshotDetailsComponent } from './snapshot-details.component';
-import { createRoutingFactory, mockProvider, SpectatorRouting, SpyObject } from '@ngneat/spectator/jest';
+import { createRoutingFactory, mockProvider, SpectatorRouting } from '@ngneat/spectator/jest';
 import { SnapshotsService } from '../../services/snapshots.service';
 import { Snapshot } from '../../model/snapshot';
 

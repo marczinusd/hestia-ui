@@ -17,12 +17,10 @@ describe('HeaderComponent', () => {
   });
 
   it('should contain File menu item', () => {
-    expect(spectator.component.items.find((item) => item.label === 'File'))
-      .toBeTruthy;
+    expect(spectator.component.items.find((item) => item.label === 'File')).toBeTruthy;
   });
 
   it('should contain Edit menu item', () => {
-    expect(spectator.component.items.find((item) => item.label === 'Edit'))
-      .toBeTruthy;
+    expect(spectator.component.items.find((item) => item.label === 'Edit')).toBeTruthy;
   });
 });

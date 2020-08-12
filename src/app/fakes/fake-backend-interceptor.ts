@@ -1,14 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // based on https://jasonwatmore.com/post/2020/07/18/angular-10-fake-backend-example-for-backendless-development
 import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpResponse,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor,
-  HTTP_INTERCEPTORS
-} from '@angular/common/http';
+import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
@@ -17,17 +10,10 @@ const users = JSON.parse(localStorage.getItem('users')) || [];
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
-  intercept(
-    request: HttpRequest<any>,
-    next: HttpHandler
-  ): Observable<HttpEvent<any>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const { url, method, body } = request;
 
-    return of(null)
-      .pipe(mergeMap(handleRoute))
-      .pipe(delay(500))
-      .pipe(materialize())
-      .pipe(dematerialize());
+    return of(null).pipe(mergeMap(handleRoute)).pipe(delay(500)).pipe(materialize()).pipe(dematerialize());
 
     function handleRoute(): Observable<HttpEvent<any>> {
       switch (true) {
@@ -41,9 +27,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
     function getAllSnapshots(): Observable<HttpEvent<any>> {
       const { username, password } = body;
-      const user = users.find(
-        (x) => x.username === username && x.password === password
-      );
+      const user = users.find((x) => x.username === username && x.password === password);
       if (!user) {
         return error('Username or password is incorrect');
       }

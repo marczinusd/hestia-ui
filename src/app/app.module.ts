@@ -11,13 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SnapshotDetailsComponent } from './components/snapshot-details/snapshot-details.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    PageNotFoundComponent,
-    DashboardComponent,
-    SnapshotDetailsComponent
-  ],
+  declarations: [AppComponent, HeaderComponent, PageNotFoundComponent, DashboardComponent, SnapshotDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, MenubarModule],
   providers: [fakeBackendProvider],
   bootstrap: [AppComponent]

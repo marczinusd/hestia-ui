@@ -23,9 +23,7 @@ describe('AppComponent', () => {
   });
 
   it('should render title', () => {
-    expect(spectator.query('.content span').textContent).toContain(
-      'hestia-ui app is running!'
-    );
+    expect(spectator.query('.content span').textContent).toContain('hestia-ui app is running!');
   });
 
   it('should render the header', () => {
