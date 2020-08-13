@@ -59,9 +59,11 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "hestia-ui:build"
+            "browserTarget": "hestia-ui:build",
+            "extraWebpackConfig": "./cypress/coverage.webpack.js",
+            "sourceMap": true
           },
           "configurations": {
             "production": {

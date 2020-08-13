@@ -12,6 +12,7 @@
     "lint:fix": "tslint --fix -c tslint.json --project tsconfig.json && eslint . --ext .ts,.json --ignore-pattern node_modules/ --fix",
     "e2e": "cypress open",
     "e2e:ci": "start-server-and-test start http-get://localhost:4200 cy:run",
+    "e2e:cover": "cypress open --env coverage=true",
     "cy:run": "cypress run"
   },
   "private": true,
@@ -35,25 +36,32 @@
     "@angular/compiler-cli": "^10.0.9",
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.1",
+    "@cypress/code-coverage": "^3.8.1",
     "@cypress/webpack-preprocessor": "5.4.2",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@ngneat/spectator": "^5.13.0",
     "@types/jest": "^26.0.9",
     "@types/node": "^12.12.54",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "babel-plugin-istanbul": "^6.0.0",
     "codelyzer": "^6.0.0",
     "cypress": "4.12.0",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
+    "istanbul-lib-coverage": "^3.0.0",
     "jest": "^26.3.0",
     "jest-preset-angular": "^8.2.1",
     "lint-staged": "^10.2.11",
+    "ngx-build-plus": "^10.1.1",
+    "nyc": "^15.1.0",
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
+    "source-map-support": "^0.5.19",
     "start-server-and-test": "^1.11.3",
     "ts-loader": "8.0.2",
-    "ts-node": "~8.3.0",
+    "ts-node": "^8.3.0",
     "tslib": "^2.0.1",
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
@@ -101,6 +109,19 @@
         }
       }
     }
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "report-dir": "./e2e-coverage",
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "coverage/**",
+      "cypress/**",
+      "**/*.spec.ts",
+      "src/app/fakes/*.ts"
+    ]
   },
   "husky": {
     "hooks": {

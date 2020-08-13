@@ -200,3 +200,7 @@ cypress/screenshots/
 cypress/videos/
 
 .eslintcache
+
+# Cypress coverage
+e2e-coverage/
+.nyc_output/
