@@ -26,6 +26,7 @@ import { SnapshotTreeComponent } from './components/snapshot-tree/snapshot-tree.
 import { MatTreeModule } from '@angular/material/tree';
 import { MatTableModule } from '@angular/material/table';
 import { AgGridModule } from 'ag-grid-angular';
+import { FileDetailsComponent } from './components/file-details/file-details.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AgGridModule } from 'ag-grid-angular';
     SnapshotDetailsComponent,
     HeaderComponent,
     SnapshotStatisticsComponent,
-    SnapshotTreeComponent
+    SnapshotTreeComponent,
+    FileDetailsComponent
   ],
   imports: [
     BrowserModule,
