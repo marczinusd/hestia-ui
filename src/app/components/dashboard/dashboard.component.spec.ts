@@ -99,7 +99,7 @@ describe('DashboardComponent', () => {
 
     spectator.click(spectator.query('.open-snapshot-button'));
 
-    expect(navigate).toHaveBeenCalledWith(['details', 1]);
+    expect(navigate).toHaveBeenCalledWith(['snapshots', 1]);
   });
 
   it('should hide loading errors if the popups hide button is pressed', () => {

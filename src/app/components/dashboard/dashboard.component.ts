@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
 
   openSnapshot(id: number): void {
     // noinspection JSIgnoredPromiseFromCall
-    this.router.navigate(['details', id]);
+    this.router.navigate(['snapshots', id]);
   }
 
   hideError(): void {

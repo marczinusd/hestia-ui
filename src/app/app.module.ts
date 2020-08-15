@@ -20,9 +20,24 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { API_BASE_URL } from './services/snapshots.service';
+import { MatTabsModule } from '@angular/material/tabs';
+import { SnapshotStatisticsComponent } from './components/snapshot-statistics/snapshot-statistics.component';
+import { SnapshotTreeComponent } from './components/snapshot-tree/snapshot-tree.component';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatTableModule } from '@angular/material/table';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, PageNotFoundComponent, DashboardComponent, SnapshotDetailsComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    PageNotFoundComponent,
+    DashboardComponent,
+    SnapshotDetailsComponent,
+    HeaderComponent,
+    SnapshotStatisticsComponent,
+    SnapshotTreeComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,7 +50,11 @@ import { API_BASE_URL } from './services/snapshots.service';
     MatListModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule,
+    MatTreeModule,
+    MatTableModule,
+    AgGridModule.withComponents([])
   ],
   providers: [fakeBackendProvider, { provide: API_BASE_URL, useFactory: () => environment.apiRoot }],
   bootstrap: [AppComponent]

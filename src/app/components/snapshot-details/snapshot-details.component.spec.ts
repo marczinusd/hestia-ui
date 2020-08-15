@@ -2,6 +2,10 @@ import { SnapshotDetailsComponent } from './snapshot-details.component';
 import { createRoutingFactory, mockProvider, SpectatorRouting } from '@ngneat/spectator/jest';
 import { SnapshotsService } from '../../services/snapshots.service';
 import { Snapshot } from '../../model/snapshot';
+import { MatTabsModule } from '@angular/material/tabs';
+import { SnapshotStatisticsComponent } from '../snapshot-statistics/snapshot-statistics.component';
+import { SnapshotTreeComponent } from '../snapshot-tree/snapshot-tree.component';
+import { MockComponent } from 'ng-mocks';
 
 describe('SnapshotDetailsComponent', () => {
   let spectator: SpectatorRouting<SnapshotDetailsComponent>;
@@ -14,6 +18,8 @@ describe('SnapshotDetailsComponent', () => {
         }
       })
     ],
+    declarations: [MockComponent(SnapshotStatisticsComponent), MockComponent(SnapshotTreeComponent)],
+    imports: [MatTabsModule],
     params: { id: '4' }
   });
 
@@ -32,9 +38,5 @@ describe('SnapshotDetailsComponent', () => {
     spectator.component.ngOnInit();
 
     expect(method).toHaveBeenCalledTimes(1);
-  });
-
-  it('should render dashboard id', () => {
-    expect(spectator.query('p')).toHaveText('4');
   });
 });
