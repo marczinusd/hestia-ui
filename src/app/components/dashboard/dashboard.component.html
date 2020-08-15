@@ -1,1 +1,29 @@
 <h2>Your snapshots</h2>
+
+<mat-card class="snapshot-card" *ngFor="let header of headers">
+  <mat-card-header>
+    <mat-card-title>{{ header.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      Lorem ipsum
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button class="open-snapshot-button" (click)="openSnapshot(header.id)">Open</button>
+  </mat-card-actions>
+</mat-card>
+
+<div class="spinner-container" *ngIf="isLoading">
+  <mat-spinner></mat-spinner>
+  <p>Loading snapshots...</p>
+</div>
+
+<div class="load-failed-box" *ngIf="showError">
+  <p>Failed to load snapshots</p>
+  <button mat-flat-button class="hide-error-button" (click)="hideError()">OK</button>
+</div>
+
+<button mat-flat-button color="primary" class="refresh-button" [disabled]="isLoading" (click)="refreshSnapshots()">
+  Refresh snapshots
+</button>

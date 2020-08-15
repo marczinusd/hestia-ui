@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
+import { SnapshotHeader } from '../model/snapshot-header';
 
 // array in local storage for registered users
 const users = JSON.parse(localStorage.getItem('users')) || [];
@@ -12,6 +13,7 @@ const users = JSON.parse(localStorage.getItem('users')) || [];
 export class FakeBackendInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const { url, method, body } = request;
+    const snapshotHeaders = [new SnapshotHeader(1, 'Bla'), new SnapshotHeader(2, 'Bla2'), new SnapshotHeader(3, 'Bla3'), new SnapshotHeader(4, 'Bla4')];
 
     return of(null).pipe(mergeMap(handleRoute)).pipe(delay(500)).pipe(materialize()).pipe(dematerialize());
 
@@ -26,18 +28,9 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     }
 
     function getAllSnapshots(): Observable<HttpEvent<any>> {
-      const { username, password } = body;
-      const user = users.find((x) => x.username === username && x.password === password);
-      if (!user) {
-        return error('Username or password is incorrect');
-      }
-      return ok({
-        id: user.id,
-        username: user.username,
-        firstName: user.firstName,
-        lastName: user.lastName,
-        token: 'fake-jwt-token'
-      });
+      console.log('Triggered GET /snapshots on FakeBackendInterceptor');
+
+      return ok(snapshotHeaders);
     }
 
     function ok(messageBody?): Observable<HttpEvent<any>> {

@@ -19,14 +19,6 @@ describe('AppComponent', () => {
     expect(spectator.component).toBeTruthy();
   });
 
-  it(`should have as title 'hestia-ui'`, () => {
-    expect(spectator.component.title).toEqual('hestia-ui');
-  });
-
-  it('should render title', () => {
-    expect(spectator.query('.content span').textContent).toContain('hestia-ui app is running!');
-  });
-
   it('should render the header', () => {
     expect(spectator.query('.main-navbar')).toBeTruthy();
   });
