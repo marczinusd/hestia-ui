@@ -1,1 +1,9 @@
-<ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+<ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code" *ngIf="!loading"></ngx-monaco-editor>
+<div class="spinner-container" *ngIf="loading">
+  <mat-spinner></mat-spinner>
+  <p>Loading file details...</p>
+</div>
+<div class="load-failed-box" *ngIf="showError">
+  <p>Failed to load file details</p>
+  <button mat-flat-button class="hide-error-button" (click)="hideError()">OK</button>
+</div>

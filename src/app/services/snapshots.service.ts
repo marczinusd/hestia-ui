@@ -1,5 +1,5 @@
 import { Inject, Injectable, InjectionToken } from '@angular/core';
-import { File as ModelFile } from '../model/file';
+import { FileHeader as ModelFile } from '../model/fileHeader';
 import { Snapshot } from '../model/snapshot';
 import { SnapshotHeader } from '../model/snapshot-header';
 import { Observable } from 'rxjs';
@@ -20,6 +20,6 @@ export class SnapshotsService {
   }
 
   public getSnapshotDetails(id: number): Snapshot {
-    return new Snapshot(id, '', '', [new ModelFile('')]);
+    return new Snapshot(id, '', '', [new ModelFile('', 1)]);
   }
 }
