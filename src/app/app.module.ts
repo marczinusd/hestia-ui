@@ -27,6 +27,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatTableModule } from '@angular/material/table';
 import { AgGridModule } from 'ag-grid-angular';
 import { FileDetailsComponent } from './components/file-details/file-details.component';
+import { MonacoEditorModule } from 'ngx-monaco-editor';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { FileDetailsComponent } from './components/file-details/file-details.com
     MatTabsModule,
     MatTreeModule,
     MatTableModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    MonacoEditorModule.forRoot(),
+    FormsModule
   ],
   providers: [fakeBackendProvider, { provide: API_BASE_URL, useFactory: () => environment.apiRoot }],
   bootstrap: [AppComponent]
