@@ -31,14 +31,14 @@ describe('FileDetailsService', () => {
       const httpClient = spectator.inject(HttpClient);
       const get = jest.spyOn(httpClient, 'get');
 
-      spectator.service.getFileDetails(1, 2);
+      spectator.service.getFileDetails('1', '2');
 
       expect(get).toBeCalledWith(expect.stringMatching('url/snapshots/2/files/1'));
     });
 
     it('should return query results as file details', () => {
       testScheduler.run((helpers) => {
-        helpers.expectObservable(spectator.service.getFileDetails(1, 2)).toBe('(b|)', { b: fileDetails });
+        helpers.expectObservable(spectator.service.getFileDetails('1', '2')).toBe('(b|)', { b: fileDetails });
       });
     });
   });

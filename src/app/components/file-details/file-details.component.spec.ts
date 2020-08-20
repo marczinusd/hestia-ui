@@ -8,18 +8,18 @@ import { TestScheduler } from 'rxjs/testing';
 import { FileDetails } from '../../model/fileDetails';
 import { LineDetails } from '../../model/lineDetails';
 import { of, throwError } from 'rxjs';
-import { FileHeader } from '../../model/fileHeader';
 
 describe('FileDetailsComponent', () => {
   let spectator: Spectator<FileDetailsComponent>;
   const testScheduler: TestScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
   const createComponent = createComponentFactory({
     component: FileDetailsComponent,
+    detectChanges: false,
     imports: [MonacoEditorModule.forRoot(), FormsModule, MatProgressSpinnerModule],
     providers: [mockProvider(FileDetailsService)]
   });
   const fileDetails: FileDetails = new FileDetails(1, 'bla.ts', 2, 3, [new LineDetails('hello', 1, 3, true), new LineDetails('world', 2, 5, true)]);
-  const fileHeader = new FileHeader('bla.ts', 1);
+  const fileHeader = '1';
 
   beforeEach(() => (spectator = createComponent()));
 
@@ -27,11 +27,11 @@ describe('FileDetailsComponent', () => {
     expect(spectator.component).toBeTruthy();
   });
 
-  it('should hide loading spinner once loading is finished', () => {
+  it('should hide the loading spinner once loading finishes', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: fileDetails }));
-      spectator.component.header = of(fileHeader);
+      spectator.component.headerId = of(fileHeader);
       spectator.component.ngOnInit();
       testScheduler.flush();
       spectator.detectComponentChanges();
@@ -45,7 +45,7 @@ describe('FileDetailsComponent', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: fileDetails }));
-      spectator.component.header = of(fileHeader);
+      spectator.component.headerId = of(fileHeader);
       spectator.component.ngOnInit();
       spectator.detectComponentChanges();
 
@@ -58,7 +58,7 @@ describe('FileDetailsComponent', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: fileDetails }));
-      spectator.component.header = of(new FileHeader('bla.ts', 1));
+      spectator.component.headerId = of(fileHeader);
       spectator.component.ngOnInit();
       testScheduler.flush();
 
@@ -70,7 +70,7 @@ describe('FileDetailsComponent', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: fileDetails }));
-      spectator.component.header = of(fileHeader);
+      spectator.component.headerId = of(fileHeader);
       spectator.component.ngOnInit();
       testScheduler.flush();
 
@@ -82,7 +82,7 @@ describe('FileDetailsComponent', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(() => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(throwError('oh no!'));
-      spectator.component.header = of(fileHeader);
+      spectator.component.headerId = of(fileHeader);
       spectator.component.ngOnInit();
       spectator.detectComponentChanges();
 
@@ -90,11 +90,11 @@ describe('FileDetailsComponent', () => {
     });
   });
 
-  it('should hide error message box if the ok button is pressed on error box', () => {
+  it('should hide error message box if upon pressing the OK button in the error box', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(() => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(throwError('oh no!'));
-      spectator.component.header = of(fileHeader);
+      spectator.component.headerId = of(fileHeader);
       spectator.component.ngOnInit();
       spectator.component.hideError();
       spectator.detectComponentChanges();

@@ -1,34 +1,37 @@
 import { SnapshotStatisticsComponent } from './snapshot-statistics.component';
 import { createRoutingFactory, Spectator } from '@ngneat/spectator/jest';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AgGridModule } from 'ag-grid-angular';
-import { Router } from '@angular/router';
+import { TestScheduler } from 'rxjs/testing';
+import { RowDoubleClickedEvent } from 'ag-grid-community';
 
 describe('SnapshotStatisticsComponent', () => {
   let spectator: Spectator<SnapshotStatisticsComponent>;
+  const event: RowDoubleClickedEvent = {
+    api: undefined,
+    columnApi: undefined,
+    context: undefined,
+    node: undefined,
+    rowIndex: 0,
+    rowPinned: '',
+    type: '',
+    data: undefined
+  };
+  const testScheduler: TestScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
   const createComponent = createRoutingFactory({
     component: SnapshotStatisticsComponent,
-    imports: [RouterTestingModule, AgGridModule.withComponents()],
-    mocks: [Router]
+    imports: [AgGridModule.withComponents()]
   });
 
   beforeEach(() => (spectator = createComponent()));
 
-  it('should create the component', () => {
-    const navigate = jest.spyOn(spectator.inject(Router), 'navigate');
+  it('should publish selected file id on observable', () => {
     spectator.component.snapshotId = 123;
+    testScheduler.run(() => {
+      const values = [];
+      spectator.component.selectedFileId.subscribe((val) => values.push(val));
+      spectator.component.openFileDetails({ ...event, data: { id: 42 } });
 
-    spectator.component.openFileDetails({
-      api: undefined,
-      columnApi: undefined,
-      context: undefined,
-      node: undefined,
-      rowIndex: 0,
-      rowPinned: '',
-      type: '',
-      data: { id: 42 }
+      expect(values[0]).toBe(42);
     });
-
-    expect(navigate).toHaveBeenCalledWith(['snapshots', 123, 'files', 42]);
   });
 });

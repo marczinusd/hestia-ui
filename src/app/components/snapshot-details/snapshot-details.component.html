@@ -1,9 +1,8 @@
-<mat-tab-group>
-  <mat-tab label="Details">
-    <app-snapshot-tree [snapshotId]="snapshotId"></app-snapshot-tree>
-    <app-file-details></app-file-details>
+<mat-tab-group [selectedIndex]="1">
+  <mat-tab label="Snapshot Details">
+    <app-snapshot-statistics [snapshotId]="snapshotId" #snapshotComponent></app-snapshot-statistics>
   </mat-tab>
-  <mat-tab label="Statistics">
-    <app-snapshot-statistics [snapshotId]="snapshotId"></app-snapshot-statistics>
+  <mat-tab label="File details">
+    <app-file-details [headerId]="this.snapshotComponent.selectedFileId"></app-file-details>
   </mat-tab>
 </mat-tab-group>

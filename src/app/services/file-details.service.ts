@@ -10,7 +10,7 @@ import { API_BASE_URL } from './snapshots.service';
 export class FileDetailsService {
   constructor(private http: HttpClient, @Inject(API_BASE_URL) private baseUrl?: string) {}
 
-  public getFileDetails(id: number, snapshotId: number): Observable<FileDetails> {
+  public getFileDetails(id: string, snapshotId: string): Observable<FileDetails> {
     return this.http.get<FileDetails>(`${this.baseUrl}/snapshots/${snapshotId}/files/${id}`);
   }
 }

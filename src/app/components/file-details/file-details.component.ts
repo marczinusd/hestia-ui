@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FileHeader } from '../../model/fileHeader';
 import { FileDetailsService } from '../../services/file-details.service';
 import { FileDetails } from '../../model/fileDetails';
 import { Observable, of } from 'rxjs';
@@ -11,7 +10,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./file-details.component.scss']
 })
 export class FileDetailsComponent implements OnInit {
-  @Input() header: Observable<FileHeader>;
+  @Input() headerId: Observable<string>;
   public file: FileDetails;
   public code: string;
   public loading: boolean;
@@ -27,12 +26,11 @@ export class FileDetailsComponent implements OnInit {
   constructor(private service: FileDetailsService) {}
 
   public ngOnInit(): void {
-    this.header = this.header ?? of();
     this.loading = true;
-    this.header
+    this.headerId
       .pipe(
         switchMap((val) => {
-          return this.service.getFileDetails(val.id, 1);
+          return this.service.getFileDetails(val, '1');
         })
       )
       .subscribe(

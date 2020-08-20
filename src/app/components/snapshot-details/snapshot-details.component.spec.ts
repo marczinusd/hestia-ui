@@ -4,7 +4,6 @@ import { SnapshotsService } from '../../services/snapshots.service';
 import { Snapshot } from '../../model/snapshot';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SnapshotStatisticsComponent } from '../snapshot-statistics/snapshot-statistics.component';
-import { SnapshotTreeComponent } from '../snapshot-tree/snapshot-tree.component';
 import { MockComponent } from 'ng-mocks';
 import { FileDetailsComponent } from '../file-details/file-details.component';
 
@@ -19,7 +18,7 @@ describe('SnapshotDetailsComponent', () => {
         }
       })
     ],
-    declarations: [MockComponent(SnapshotStatisticsComponent), MockComponent(SnapshotTreeComponent), MockComponent(FileDetailsComponent)],
+    declarations: [MockComponent(SnapshotStatisticsComponent), MockComponent(FileDetailsComponent)],
     imports: [MatTabsModule],
     params: { id: '4' }
   });

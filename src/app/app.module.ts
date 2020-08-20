@@ -22,13 +22,12 @@ import { environment } from '../environments/environment';
 import { API_BASE_URL } from './services/snapshots.service';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SnapshotStatisticsComponent } from './components/snapshot-statistics/snapshot-statistics.component';
-import { SnapshotTreeComponent } from './components/snapshot-tree/snapshot-tree.component';
-import { MatTreeModule } from '@angular/material/tree';
 import { MatTableModule } from '@angular/material/table';
 import { AgGridModule } from 'ag-grid-angular';
 import { FileDetailsComponent } from './components/file-details/file-details.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { FormsModule } from '@angular/forms';
+import { FileSelectionStateService, SelectionService } from './services/selection.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +38,6 @@ import { FormsModule } from '@angular/forms';
     SnapshotDetailsComponent,
     HeaderComponent,
     SnapshotStatisticsComponent,
-    SnapshotTreeComponent,
     FileDetailsComponent
   ],
   imports: [
@@ -56,13 +54,19 @@ import { FormsModule } from '@angular/forms';
     MatProgressSpinnerModule,
     HttpClientModule,
     MatTabsModule,
-    MatTreeModule,
     MatTableModule,
     AgGridModule.withComponents([]),
     MonacoEditorModule.forRoot(),
     FormsModule
   ],
-  providers: [fakeBackendProvider, { provide: API_BASE_URL, useFactory: () => environment.apiRoot }],
+  providers: [
+    fakeBackendProvider,
+    { provide: API_BASE_URL, useFactory: () => environment.apiRoot },
+    {
+      provide: FileSelectionStateService,
+      useExisting: SelectionService
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
