@@ -44,7 +44,7 @@
     "@cypress/code-coverage": "^3.8.1",
     "@cypress/webpack-preprocessor": "5.4.6",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@ngneat/spectator": "^5.13.0",
+    "@ngneat/spectator": "^5.13.4",
     "@types/jest": "^26.0.9",
     "@types/node": "^12.12.54",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
