@@ -32,7 +32,7 @@
     "ag-grid-angular": "^23.2.1",
     "ag-grid-community": "^23.2.1",
     "ngx-monaco-editor": "^9.0.0",
-    "rxjs": "~6.5.5",
+    "rxjs": "~6.6.3",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
