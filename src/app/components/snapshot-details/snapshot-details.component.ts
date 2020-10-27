@@ -10,12 +10,12 @@ import { Snapshot } from '../../model/snapshot';
 })
 export class SnapshotDetailsComponent implements OnInit {
   snapshot: Snapshot;
-  public snapshotId: number;
+  public snapshotId: string;
 
   constructor(private route: ActivatedRoute, private service: SnapshotsService) {}
 
   ngOnInit(): void {
-    this.snapshotId = Number(this.route.snapshot.paramMap.get('id'));
+    this.snapshotId = this.route.snapshot.paramMap.get('id');
     this.snapshot = this.service.getSnapshotDetails(this.snapshotId);
   }
 }

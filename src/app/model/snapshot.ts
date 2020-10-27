@@ -1,5 +1,9 @@
-import { FileHeader as ModelFile } from './fileHeader';
+import { File } from './file';
 
-export class Snapshot {
-  constructor(public id: number, public name: string, public hash: string, public files: ModelFile[]) {}
+export interface Snapshot {
+  id: string;
+  name: string;
+  atHash: string;
+  commitDate: string;
+  files: File[];
 }

@@ -5,9 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FileDetailsService } from '../../services/file-details.service';
 import { TestScheduler } from 'rxjs/testing';
-import { FileDetails } from '../../model/fileDetails';
-import { LineDetails } from '../../model/lineDetails';
+import { File } from '../../model/file';
 import { of, throwError } from 'rxjs';
+import { Line } from '../../model/line';
 
 describe('FileDetailsComponent', () => {
   let spectator: Spectator<FileDetailsComponent>;
@@ -18,8 +18,12 @@ describe('FileDetailsComponent', () => {
     imports: [MonacoEditorModule.forRoot(), FormsModule, MatProgressSpinnerModule],
     providers: [mockProvider(FileDetailsService)]
   });
-  const fileDetails: FileDetails = new FileDetails(1, 'bla.ts', 2, 3, [new LineDetails('hello', 1, 3, true), new LineDetails('world', 2, 5, true)]);
-  const fileHeader = '1';
+  const lines: Line[] = [
+    { content: 'hello', lineNumber: 1, numberOfAuthors: 2, numberOfChanges: 3, isCovered: true },
+    { content: 'world', lineNumber: 2, numberOfAuthors: 2, numberOfChanges: 3, isCovered: true }
+  ];
+  const file: File = { lines, path: 'bla.ts', numberOfAuthors: 2, numberOfCommits: 3, id: '1' };
+  const fileId = '1';
 
   beforeEach(() => (spectator = createComponent()));
 
@@ -30,8 +34,8 @@ describe('FileDetailsComponent', () => {
   it('should hide the loading spinner once loading finishes', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(({ cold }) => {
-      jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: fileDetails }));
-      spectator.component.headerId = of(fileHeader);
+      jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: file }));
+      spectator.component.headerId = of(fileId);
       spectator.component.ngOnInit();
       testScheduler.flush();
       spectator.detectComponentChanges();
@@ -44,8 +48,8 @@ describe('FileDetailsComponent', () => {
   it('should show loading spinner while file details query is in progress', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(({ cold }) => {
-      jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: fileDetails }));
-      spectator.component.headerId = of(fileHeader);
+      jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: file }));
+      spectator.component.headerId = of(fileId);
       spectator.component.ngOnInit();
       spectator.detectComponentChanges();
 
@@ -57,8 +61,8 @@ describe('FileDetailsComponent', () => {
   it('should select correct language mode for file extension', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(({ cold }) => {
-      jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: fileDetails }));
-      spectator.component.headerId = of(fileHeader);
+      jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: file }));
+      spectator.component.headerId = of(fileId);
       spectator.component.ngOnInit();
       testScheduler.flush();
 
@@ -69,8 +73,8 @@ describe('FileDetailsComponent', () => {
   it('should render correct text based on line details returned', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(({ cold }) => {
-      jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: fileDetails }));
-      spectator.component.headerId = of(fileHeader);
+      jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: file }));
+      spectator.component.headerId = of(fileId);
       spectator.component.ngOnInit();
       testScheduler.flush();
 
@@ -82,7 +86,7 @@ describe('FileDetailsComponent', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(() => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(throwError('oh no!'));
-      spectator.component.headerId = of(fileHeader);
+      spectator.component.headerId = of(fileId);
       spectator.component.ngOnInit();
       spectator.detectComponentChanges();
 
@@ -94,7 +98,7 @@ describe('FileDetailsComponent', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     testScheduler.run(() => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(throwError('oh no!'));
-      spectator.component.headerId = of(fileHeader);
+      spectator.component.headerId = of(fileId);
       spectator.component.ngOnInit();
       spectator.component.hideError();
       spectator.detectComponentChanges();

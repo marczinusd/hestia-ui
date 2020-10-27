@@ -1,11 +1,7 @@
 import { Inject, Injectable, InjectionToken } from '@angular/core';
-import { FileHeader as ModelFile } from '../model/fileHeader';
-import { Snapshot } from '../model/snapshot';
-import { SnapshotHeader } from '../model/snapshot-header';
 import { Observable } from 'rxjs';
-import { subscribeToResult } from 'rxjs/internal-compatibility';
-import { delay, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+import { Snapshot } from '../model/snapshot';
 
 export const API_BASE_URL = new InjectionToken<string>('API_BASE_URL');
 
@@ -15,11 +11,11 @@ export const API_BASE_URL = new InjectionToken<string>('API_BASE_URL');
 export class SnapshotsService {
   constructor(private http: HttpClient, @Inject(API_BASE_URL) private baseUrl?: string) {}
 
-  public getAllHeaders(): Observable<SnapshotHeader[]> {
-    return this.http.get<SnapshotHeader[]>(`${this.baseUrl}/snapshots`);
+  public getAllHeaders(): Observable<Snapshot[]> {
+    return this.http.get<Snapshot[]>(`${this.baseUrl}/snapshots`);
   }
 
-  public getSnapshotDetails(id: number): Snapshot {
-    return new Snapshot(id, '', '', [new ModelFile('', 1)]);
+  public getSnapshotDetails(id: string): Snapshot {
+    return { id, atHash: '', name: '', files: [], commitDate: '' };
   }
 }

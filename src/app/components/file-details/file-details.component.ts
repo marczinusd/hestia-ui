@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FileDetailsService } from '../../services/file-details.service';
-import { FileDetails } from '../../model/fileDetails';
-import { Observable, of } from 'rxjs';
+import { File } from '../../model/file';
+import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 @Component({
@@ -11,7 +11,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class FileDetailsComponent implements OnInit {
   @Input() headerId: Observable<string>;
-  public file: FileDetails;
+  public file: File;
   public code: string;
   public loading: boolean;
   public editorOptions = { theme: 'vs-dark', language: 'javascript', readOnly: true };
@@ -30,13 +30,13 @@ export class FileDetailsComponent implements OnInit {
     this.headerId
       .pipe(
         switchMap((val) => {
-          return this.service.getFileDetails(val, '1');
+          return this.service.getFileDetails(val);
         })
       )
       .subscribe(
         (details) => {
           this.file = details;
-          this.code = details.lines.map((l) => l.text).join('\n');
+          this.code = details.lines.map((l) => l.content).join('\n');
           this.editorOptions = { ...this.editorOptions, language: this.mapExtensionToMonacoLanguage(details.path) };
         },
         () => {

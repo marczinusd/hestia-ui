@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SnapshotsService } from '../../services/snapshots.service';
-import { SnapshotHeader } from '../../model/snapshot-header';
 import { Router } from '@angular/router';
+import { Snapshot } from '../../model/snapshot';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  public headers: SnapshotHeader[];
+  public headers: Snapshot[];
   public isLoading: boolean;
   public showError: boolean;
 

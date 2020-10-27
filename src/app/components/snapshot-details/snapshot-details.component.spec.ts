@@ -13,9 +13,7 @@ describe('SnapshotDetailsComponent', () => {
     component: SnapshotDetailsComponent,
     providers: [
       mockProvider(SnapshotsService, {
-        getSnapshotDetails: (id: number): Snapshot => {
-          return new Snapshot(id, '', '', []);
-        }
+        getSnapshotDetails: (id: string): Snapshot => ({ id, commitDate: '', files: [], name: '', atHash: '' })
       })
     ],
     declarations: [MockComponent(SnapshotStatisticsComponent), MockComponent(FileDetailsComponent)],

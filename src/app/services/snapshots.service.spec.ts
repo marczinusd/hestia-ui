@@ -2,8 +2,8 @@ import { API_BASE_URL, SnapshotsService } from './snapshots.service';
 import { SpectatorService, createHttpFactory, mockProvider } from '@ngneat/spectator/jest';
 import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
-import { SnapshotHeader } from '../model/snapshot-header';
 import { TestScheduler } from 'rxjs/testing';
+import { Snapshot } from '../model/snapshot';
 
 describe('SnapshotsService', () => {
   let spectator: SpectatorService<SnapshotsService>;
@@ -11,12 +11,13 @@ describe('SnapshotsService', () => {
     providers: [
       { provide: API_BASE_URL, useFactory: () => 'url' },
       mockProvider(HttpClient, {
-        get: () => of<SnapshotHeader[]>([new SnapshotHeader(1, 'bla')])
+        get: () => of<Snapshot[]>([snapshot])
       })
     ],
     service: SnapshotsService
   });
-  const testScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
+  const snapshot: Snapshot = { id: '1', commitDate: '', files: [], name: '', atHash: '' };
+  const jestExpect = (actual, expected) => expect(actual).toStrictEqual(expected);
 
   beforeEach(() => (spectator = createHttp()));
 
@@ -35,15 +36,17 @@ describe('SnapshotsService', () => {
     });
 
     it('should return query results as snapshots', () => {
+      const testScheduler = new TestScheduler(jestExpect);
+
       testScheduler.run((helpers) => {
-        helpers.expectObservable(spectator.service.getAllHeaders()).toBe('(b|)', { b: [new SnapshotHeader(1, 'bla')] });
+        helpers.expectObservable(spectator.service.getAllHeaders()).toBe('(b|)', { b: [snapshot] });
       });
     });
   });
 
   describe('getSnapshotDetails(id)', () => {
     it('should return mock details with id passed in', () => {
-      expect(spectator.service.getSnapshotDetails(1).id).toBe(1);
+      expect(spectator.service.getSnapshotDetails('1').id).toBe('1');
     });
   });
 });
