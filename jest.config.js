@@ -11,7 +11,7 @@ module.exports = {
     '!**/*.d.ts'
   ],
   coveragePathIgnorePatterns: ['<rootDir>/node_modules'],
-  coverageReporters: ['json', 'lcov', 'text'],
+  coverageReporters: ['json', 'lcov'],
   coverageThreshold: {
     global: {
       lines: 90

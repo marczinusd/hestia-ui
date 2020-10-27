@@ -4,15 +4,23 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
-import { SnapshotHeader } from '../model/snapshot-header';
 import { FileDetails } from '../model/fileDetails';
 import { LineDetails } from '../model/lineDetails';
+import { createSnapshot } from '../snapshot/state/snapshot.model';
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const { url, method } = request;
-    const snapshotHeaders = [new SnapshotHeader(1, 'Bla'), new SnapshotHeader(2, 'Bla2'), new SnapshotHeader(3, 'Bla3'), new SnapshotHeader(4, 'Bla4')];
+    const snapshotHeaders = [
+      createSnapshot({ id: '1', name: 'bla', atHash: 'hash', files: [] }),
+      createSnapshot({
+        id: '1',
+        name: 'bla',
+        atHash: 'hash',
+        files: []
+      })
+    ];
     const fileDetails = new FileDetails(1, 'file.ts', 1, 5, [new LineDetails('console.log("hello world!")', 1, 5, false)]);
 
     return of(null).pipe(mergeMap(handleRoute)).pipe(delay(500)).pipe(materialize()).pipe(dematerialize());

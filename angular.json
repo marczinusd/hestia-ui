@@ -95,5 +95,8 @@
       }
     }
   },
-  "defaultProject": "hestia-ui"
+  "defaultProject": "hestia-ui",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }

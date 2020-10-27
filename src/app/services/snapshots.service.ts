@@ -3,8 +3,6 @@ import { FileHeader as ModelFile } from '../model/fileHeader';
 import { Snapshot } from '../model/snapshot';
 import { SnapshotHeader } from '../model/snapshot-header';
 import { Observable } from 'rxjs';
-import { subscribeToResult } from 'rxjs/internal-compatibility';
-import { delay, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 export const API_BASE_URL = new InjectionToken<string>('API_BASE_URL');

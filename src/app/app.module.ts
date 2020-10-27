@@ -28,6 +28,7 @@ import { FileDetailsComponent } from './components/file-details/file-details.com
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { FormsModule } from '@angular/forms';
 import { FileSelectionStateService, SelectionService } from './services/selection.service';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 
 @NgModule({
   declarations: [
@@ -57,10 +58,11 @@ import { FileSelectionStateService, SelectionService } from './services/selectio
     MatTableModule,
     AgGridModule.withComponents([]),
     MonacoEditorModule.forRoot(),
-    FormsModule
+    FormsModule,
+    environment.production ? [] : AkitaNgDevtools.forRoot()
   ],
   providers: [
-    fakeBackendProvider,
+    // fakeBackendProvider,
     { provide: API_BASE_URL, useFactory: () => environment.apiRoot },
     {
       provide: FileSelectionStateService,

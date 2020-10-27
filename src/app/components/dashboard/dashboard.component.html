@@ -1,29 +1,25 @@
 <h2>Your snapshots</h2>
 
-<mat-card class="snapshot-card" *ngFor="let header of headers">
+<mat-card class="snapshot-card" *ngFor="let snapshot of snapshots$ | async">
   <mat-card-header>
-    <mat-card-title>{{ header.name }}</mat-card-title>
+    <mat-card-title>{{ snapshot.name }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p>
-      Lorem ipsum
-    </p>
+    <p>Lorem ipsum</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button class="open-snapshot-button" (click)="openSnapshot(header.id)">Open</button>
+    <button mat-flat-button class="open-snapshot-button" (click)="openSnapshot(snapshot.id)">Open</button>
   </mat-card-actions>
 </mat-card>
 
-<div class="spinner-container" *ngIf="isLoading">
+<div class="spinner-container" *ngIf="isLoading$ | async">
   <mat-spinner></mat-spinner>
   <p>Loading snapshots...</p>
 </div>
 
-<div class="load-failed-box" *ngIf="showError">
-  <p>Failed to load snapshots</p>
+<div class="load-failed-box" *ngIf="error">
+  <p>Failed to load snapshots: {{ error }}</p>
   <button mat-flat-button class="hide-error-button" (click)="hideError()">OK</button>
 </div>
 
-<button mat-flat-button color="primary" class="refresh-button" [disabled]="isLoading" (click)="refreshSnapshots()">
-  Refresh snapshots
-</button>
+<button mat-flat-button color="primary" class="refresh-button" [disabled]="isLoading$ | async" (click)="refreshSnapshots()">Refresh snapshots</button>
