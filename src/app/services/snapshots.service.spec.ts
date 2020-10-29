@@ -46,7 +46,13 @@ describe('SnapshotsService', () => {
 
   describe('getSnapshotDetails(id)', () => {
     it('should return mock details with id passed in', () => {
-      expect(spectator.service.getSnapshotDetails('1').id).toBe('1');
+      const httpClient = spectator.inject(HttpClient);
+      jest.spyOn(httpClient, 'get').mockReturnValue(of(snapshot));
+      const testScheduler = new TestScheduler(jestExpect);
+
+      testScheduler.run(({ expectObservable }) => {
+        expectObservable(spectator.service.getSnapshotDetails('1')).toBe('(a|)', { a: snapshot });
+      });
     });
   });
 });

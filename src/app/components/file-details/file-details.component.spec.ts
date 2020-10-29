@@ -11,7 +11,7 @@ import { Line } from '../../model/line';
 
 describe('FileDetailsComponent', () => {
   let spectator: Spectator<FileDetailsComponent>;
-  const testScheduler: TestScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
+  const jestExpect = (actual, expected) => expect(actual).toStrictEqual(expected);
   const createComponent = createComponentFactory({
     component: FileDetailsComponent,
     detectChanges: false,
@@ -22,7 +22,7 @@ describe('FileDetailsComponent', () => {
     { content: 'hello', lineNumber: 1, numberOfAuthors: 2, numberOfChanges: 3, isCovered: true },
     { content: 'world', lineNumber: 2, numberOfAuthors: 2, numberOfChanges: 3, isCovered: true }
   ];
-  const file: File = { lines, path: 'bla.ts', numberOfAuthors: 2, numberOfCommits: 3, id: '1' };
+  const file: File = { lines, path: 'bla.ts', lifetimeAuthors: 2, lifetimeChanges: 3, coveragePercentage: 50, id: '1' };
   const fileId = '1';
 
   beforeEach(() => (spectator = createComponent()));
@@ -33,6 +33,8 @@ describe('FileDetailsComponent', () => {
 
   it('should hide the loading spinner once loading finishes', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
+    const testScheduler = new TestScheduler(jestExpect);
+
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: file }));
       spectator.component.headerId = of(fileId);
@@ -47,6 +49,8 @@ describe('FileDetailsComponent', () => {
 
   it('should show loading spinner while file details query is in progress', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
+    const testScheduler = new TestScheduler(jestExpect);
+
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: file }));
       spectator.component.headerId = of(fileId);
@@ -60,6 +64,8 @@ describe('FileDetailsComponent', () => {
 
   it('should select correct language mode for file extension', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
+    const testScheduler = new TestScheduler(jestExpect);
+
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: file }));
       spectator.component.headerId = of(fileId);
@@ -72,6 +78,8 @@ describe('FileDetailsComponent', () => {
 
   it('should render correct text based on line details returned', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
+    const testScheduler = new TestScheduler(jestExpect);
+
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: file }));
       spectator.component.headerId = of(fileId);
@@ -84,6 +92,8 @@ describe('FileDetailsComponent', () => {
 
   it('should show error message if file details could not be loaded', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
+    const testScheduler = new TestScheduler(jestExpect);
+
     testScheduler.run(() => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(throwError('oh no!'));
       spectator.component.headerId = of(fileId);
@@ -96,6 +106,8 @@ describe('FileDetailsComponent', () => {
 
   it('should hide error message box if upon pressing the OK button in the error box', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
+    const testScheduler = new TestScheduler(jestExpect);
+
     testScheduler.run(() => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(throwError('oh no!'));
       spectator.component.headerId = of(fileId);

@@ -18,9 +18,9 @@ export class FakeBackendInterceptor implements HttpInterceptor {
       { content: 'console.warn()', isCovered: true, lineNumber: 3, numberOfAuthors: 0, numberOfChanges: 0 }
     ];
     const files: File[] = [
-      { id: '1', lines: [], numberOfAuthors: 1, numberOfCommits: 5, path: '/dev/file1.js' },
-      { id: '2', lines: [lines[0]], numberOfAuthors: 1, numberOfCommits: 5, path: '/dev/file2.cs' },
-      { id: '3', lines: [...lines], numberOfAuthors: 1, numberOfCommits: 5, path: '/dev/file3.js' }
+      { id: '1', lines: [], lifetimeAuthors: 1, lifetimeChanges: 5, coveragePercentage: 50, path: '/dev/file1.js' },
+      { id: '2', lines: [lines[0]], lifetimeAuthors: 1, lifetimeChanges: 5, coveragePercentage: 50, path: '/dev/file2.cs' },
+      { id: '3', lines: [...lines], lifetimeAuthors: 1, lifetimeChanges: 5, coveragePercentage: 50, path: '/dev/file3.js' }
     ];
     const snapshots: Snapshot[] = [
       { id: '1', files: [], name: 'snapshot1', atHash: 'hash', commitDate: '2020-10-20T23:45:05' },
@@ -33,9 +33,15 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     function handleRoute(): Observable<HttpEvent<any>> {
       switch (true) {
         case url.endsWith('/snapshots') && method === 'GET':
+          console.log('invoked /snapshots on interceptor');
           return getAllSnapshots();
-        case url.includes('/files/'):
+        case url.endsWith('/files') && method === 'GET':
+          console.log('invoked /files/ on interceptor');
           return getFileDetails();
+        case url.includes('/files/'):
+          const id = url.split('/files/')[1];
+          console.log(`invoked /files/${id} on interceptor`);
+          return ok(files.find((f) => f.id === id));
         default:
           // pass through any requests not handled above
           return next.handle(request);
@@ -47,8 +53,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     }
 
     function getAllSnapshots(): Observable<HttpEvent<any>> {
-      console.log('Triggered GET /snapshots on FakeBackendInterceptor');
-
       return ok(snapshots);
     }
 

@@ -4,7 +4,6 @@ import { TestScheduler } from 'rxjs/testing';
 
 describe('SelectionService', () => {
   let spectator: SpectatorService<SelectionService>;
-  const testScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
 
   beforeEach(() => {
     spectator = createServiceFactory({ service: SelectionService })();
@@ -15,6 +14,7 @@ describe('SelectionService', () => {
   });
 
   it('should emit newly selected file if selectFile() was called', () => {
+    const testScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
     testScheduler.run(({ expectObservable }) => {
       spectator.service.selectFile('1');
 

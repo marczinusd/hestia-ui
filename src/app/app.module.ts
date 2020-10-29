@@ -60,7 +60,6 @@ import { FileSelectionStateService, SelectionService } from './services/selectio
     FormsModule
   ],
   providers: [
-    fakeBackendProvider,
     { provide: API_BASE_URL, useFactory: () => environment.apiRoot },
     {
       provide: FileSelectionStateService,

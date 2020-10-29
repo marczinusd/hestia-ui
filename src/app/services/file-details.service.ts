@@ -13,4 +13,8 @@ export class FileDetailsService {
   public getFileDetails(id: string): Observable<File> {
     return this.http.get<File>(`${this.baseUrl}/files/${id}`);
   }
+
+  public getAllFilesForSnapshot(snapshotId: string): Observable<File[]> {
+    return this.http.get<File[]>(`${this.baseUrl}/snapshots/${snapshotId}/files`);
+  }
 }

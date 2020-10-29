@@ -8,7 +8,7 @@ import { File } from '../model/file';
 
 describe('FileDetailsService', () => {
   let spectator: SpectatorService<FileDetailsService>;
-  const file: File = { id: '1', numberOfCommits: 1, numberOfAuthors: 2, path: 'file.ts', lines: [] };
+  const file: File = { id: '1', lifetimeChanges: 1, lifetimeAuthors: 2, coveragePercentage: 50, path: 'file.ts', lines: [] };
   const createHttp = createHttpFactory({
     providers: [
       { provide: API_BASE_URL, useFactory: () => 'url' },
@@ -18,7 +18,7 @@ describe('FileDetailsService', () => {
     ],
     service: FileDetailsService
   });
-  const testScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
+  const jestExpect = (actual, expected) => expect(actual).toStrictEqual(expected);
 
   beforeEach(() => (spectator = createHttp()));
 
@@ -37,6 +37,7 @@ describe('FileDetailsService', () => {
     });
 
     it('should return query results as file details', () => {
+      const testScheduler = new TestScheduler(jestExpect);
       testScheduler.run((helpers) => {
         helpers.expectObservable(spectator.service.getFileDetails('1')).toBe('(b|)', { b: file });
       });

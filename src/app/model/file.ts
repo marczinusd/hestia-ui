@@ -3,7 +3,8 @@ import { Line } from './line';
 export interface File {
   id: string;
   path: string;
-  numberOfAuthors: number;
-  numberOfCommits: number;
+  lifetimeChanges: number;
+  lifetimeAuthors: number;
+  coveragePercentage: number;
   lines: Line[];
 }

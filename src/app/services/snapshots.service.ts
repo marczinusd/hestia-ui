@@ -15,7 +15,7 @@ export class SnapshotsService {
     return this.http.get<Snapshot[]>(`${this.baseUrl}/snapshots`);
   }
 
-  public getSnapshotDetails(id: string): Snapshot {
-    return { id, atHash: '', name: '', files: [], commitDate: '' };
+  public getSnapshotDetails(id: string): Observable<Snapshot> {
+    return this.http.get<Snapshot>(`${this.baseUrl}/snapshots/${id}`);
   }
 }
