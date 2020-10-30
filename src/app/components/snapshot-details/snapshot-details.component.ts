@@ -8,7 +8,7 @@ import { SelectionService } from '../../services/selection.service';
 })
 export class SnapshotDetailsComponent implements OnInit {
   public snapshotId: string;
-  public selectedIndex = 1;
+  public selectedIndex = 0;
 
   constructor(private selection: SelectionService) {}
 

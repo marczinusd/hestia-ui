@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { fakeBackendProvider } from './fakes/fake-backend-interceptor';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SnapshotDetailsComponent } from './components/snapshot-details/snapshot-details.component';
@@ -27,7 +26,6 @@ import { AgGridModule } from 'ag-grid-angular';
 import { FileDetailsComponent } from './components/file-details/file-details.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { FormsModule } from '@angular/forms';
-import { FileSelectionStateService, SelectionService } from './services/selection.service';
 
 @NgModule({
   declarations: [
@@ -59,13 +57,7 @@ import { FileSelectionStateService, SelectionService } from './services/selectio
     MonacoEditorModule.forRoot(),
     FormsModule
   ],
-  providers: [
-    { provide: API_BASE_URL, useFactory: () => environment.apiRoot },
-    {
-      provide: FileSelectionStateService,
-      useExisting: SelectionService
-    }
-  ],
+  providers: [{ provide: API_BASE_URL, useFactory: () => environment.apiRoot }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

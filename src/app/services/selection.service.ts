@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Subject, Observable, ReplaySubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SelectionService {
-  private readonly selectedSnapshotIdSubject: BehaviorSubject<string> = new BehaviorSubject<string>(undefined);
-  private readonly selectedFileIdSubject: BehaviorSubject<string> = new BehaviorSubject<string>(undefined);
+  private readonly selectedSnapshotIdSubject: Subject<string> = new ReplaySubject<string>(1);
+  private readonly selectedFileIdSubject: Subject<string> = new Subject<string>();
 
   public selectedFileId: Observable<string> = this.selectedFileIdSubject;
   public selectedSnapshotId: Observable<string> = this.selectedSnapshotIdSubject;
