@@ -8,6 +8,7 @@ import { TestScheduler } from 'rxjs/testing';
 import { File } from '../../model/file';
 import { throwError } from 'rxjs';
 import { Line } from '../../model/line';
+import { SelectionService } from '../../services/selection.service';
 
 describe('FileDetailsComponent', () => {
   let spectator: Spectator<FileDetailsComponent>;
@@ -33,10 +34,12 @@ describe('FileDetailsComponent', () => {
   it('should hide the loading spinner once loading finishes', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     const testScheduler = new TestScheduler(jestExpect);
+    const selection = spectator.inject(SelectionService);
 
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('-a|', { a: file }));
       spectator.component.ngOnInit();
+      selection.selectFile('1');
       testScheduler.flush();
       spectator.detectComponentChanges();
 
@@ -62,10 +65,12 @@ describe('FileDetailsComponent', () => {
   it('should select correct language mode for file extension', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     const testScheduler = new TestScheduler(jestExpect);
+    const selection = spectator.inject(SelectionService);
 
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: file }));
       spectator.component.ngOnInit();
+      selection.selectFile('1');
       testScheduler.flush();
 
       expect(spectator.component.editorOptions.language).toBe('typescript');
@@ -75,10 +80,12 @@ describe('FileDetailsComponent', () => {
   it('should render correct text based on the line details returned', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     const testScheduler = new TestScheduler(jestExpect);
+    const selection = spectator.inject(SelectionService);
 
     testScheduler.run(({ cold }) => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(cold('(a|)', { a: file }));
       spectator.component.ngOnInit();
+      selection.selectFile('1');
       testScheduler.flush();
 
       expect(spectator.component.code).toBe('hello\nworld');
@@ -88,10 +95,12 @@ describe('FileDetailsComponent', () => {
   it('should show error message if file details could not be loaded', () => {
     const service = spectator.inject<FileDetailsService>(FileDetailsService);
     const testScheduler = new TestScheduler(jestExpect);
+    const selection = spectator.inject(SelectionService);
 
     testScheduler.run(() => {
       jest.spyOn(service, 'getFileDetails').mockReturnValue(throwError('Oh no!'));
       spectator.component.ngOnInit();
+      selection.selectFile('1');
       spectator.detectComponentChanges();
 
       expect(spectator.query('.load-failed-box')).toBeTruthy();

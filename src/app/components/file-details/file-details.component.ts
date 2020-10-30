@@ -39,7 +39,7 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
   }
 
   public ngOnDestroy(): void {
-    this.selectedFileSubscription.unsubscribe();
+    this.selectedFileSubscription?.unsubscribe();
   }
 
   public ngOnInit(): void {

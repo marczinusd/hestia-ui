@@ -14,11 +14,10 @@ describe('SelectionService', () => {
   });
 
   it('should emit newly selected file if selectFile() was called', () => {
-    const testScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
-    testScheduler.run(({ expectObservable }) => {
-      spectator.service.selectFile('1');
+    const emittedValues = [];
+    spectator.service.selectedFileId.subscribe((val) => emittedValues.push(val));
+    spectator.service.selectFile('1');
 
-      expectObservable(spectator.service.selectedFileId).toBe('a', { a: '1' });
-    });
+    expect(emittedValues).toHaveLength(1);
   });
 });

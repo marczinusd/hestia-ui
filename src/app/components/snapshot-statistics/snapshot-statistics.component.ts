@@ -39,7 +39,7 @@ export class SnapshotStatisticsComponent implements OnInit, OnDestroy {
   openFileDetails = (event: RowDoubleClickedEvent): void => this.selectionService.selectFile((event.data as File).id);
 
   public ngOnDestroy(): void {
-    this.selectedSnapshotSubscription.unsubscribe();
+    this.selectedSnapshotSubscription?.unsubscribe();
   }
 
   ngOnInit(): void {
