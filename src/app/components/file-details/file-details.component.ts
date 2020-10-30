@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FileDetailsService } from '../../services/file-details.service';
 import { File } from '../../model/file';
-import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Line } from '../../model/line';
+import { SelectionService } from '../../services/selection.service';
 
 @Component({
   selector: 'app-file-details',
@@ -11,8 +11,7 @@ import { Line } from '../../model/line';
   styleUrls: ['./file-details.component.scss']
 })
 export class FileDetailsComponent implements OnInit {
-  constructor(private service: FileDetailsService) {}
-  @Input() headerId: Observable<string>;
+  constructor(private service: FileDetailsService, private selectionService: SelectionService) {}
   public file: File;
   public code: string;
   public loading: boolean;
@@ -38,7 +37,7 @@ export class FileDetailsComponent implements OnInit {
 
   public ngOnInit(): void {
     this.loading = true;
-    this.headerId
+    this.selectionService.selectedFileId
       .pipe(
         switchMap((val) => {
           return this.service.getFileDetails(val);

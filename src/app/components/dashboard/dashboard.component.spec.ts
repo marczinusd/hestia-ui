@@ -97,6 +97,8 @@ describe('DashboardComponent', () => {
     const service = spectator.inject<SnapshotsService>(SnapshotsService);
     jest.spyOn(service, 'getAllHeaders').mockReturnValue(of([snapshot]));
     const navigate = jest.spyOn(spectator.inject(Router), 'navigate');
+    navigate.mockReturnValue(Promise.resolve(true));
+
     spectator.component.ngOnInit();
     spectator.detectComponentChanges();
 

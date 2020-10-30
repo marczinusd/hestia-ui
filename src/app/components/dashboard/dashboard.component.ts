@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SnapshotsService } from '../../services/snapshots.service';
 import { Router } from '@angular/router';
 import { Snapshot } from '../../model/snapshot';
+import { SelectionService } from '../../services/selection.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,7 @@ export class DashboardComponent implements OnInit {
   public isLoading: boolean;
   public showError: boolean;
 
-  constructor(private service: SnapshotsService, private router: Router) {}
+  constructor(private service: SnapshotsService, private selectionService: SelectionService, private router: Router) {}
 
   ngOnInit(): void {
     this.refreshSnapshots();
@@ -33,9 +34,10 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  openSnapshot(id: number): void {
-    // noinspection JSIgnoredPromiseFromCall
-    this.router.navigate(['snapshots', id]);
+  openSnapshot(id: string): void {
+    this.router.navigate(['snapshots', id]).then(() => {
+      this.selectionService.selectSnapshot(id);
+    });
   }
 
   hideError(): void {

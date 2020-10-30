@@ -1,8 +1,10 @@
 import { SnapshotStatisticsComponent } from './snapshot-statistics.component';
-import { createRoutingFactory, Spectator } from '@ngneat/spectator/jest';
+import { createRoutingFactory, mockProvider, Spectator } from '@ngneat/spectator/jest';
 import { AgGridModule } from 'ag-grid-angular';
-import { TestScheduler } from 'rxjs/testing';
 import { RowDoubleClickedEvent } from 'ag-grid-community';
+import { FileDetailsService } from '../../services/file-details.service';
+import { SelectionService } from '../../services/selection.service';
+import { of } from 'rxjs';
 
 describe('SnapshotStatisticsComponent', () => {
   let spectator: Spectator<SnapshotStatisticsComponent>;
@@ -18,21 +20,18 @@ describe('SnapshotStatisticsComponent', () => {
   };
   const createComponent = createRoutingFactory({
     component: SnapshotStatisticsComponent,
-    imports: [AgGridModule.withComponents()]
+    imports: [AgGridModule.withComponents()],
+    providers: [mockProvider(FileDetailsService, { getAllFilesForSnapshot: () => of() }), mockProvider(SelectionService, { selectedSnapshotId: of('1') })]
   });
 
   beforeEach(() => (spectator = createComponent()));
 
   it('should publish selected file id on observable', () => {
-    const testScheduler: TestScheduler = new TestScheduler((actual, expected) => expect(actual).toStrictEqual(expected));
-    spectator.component.snapshotId = '123';
+    const selectionService = spectator.inject(SelectionService);
+    const selectFn = jest.spyOn(selectionService, 'selectFile');
 
-    testScheduler.run(() => {
-      const values = [];
-      spectator.component.selectedFileId.subscribe((val) => values.push(val));
-      spectator.component.openFileDetails({ ...event, data: { id: '42' } });
+    spectator.component.openFileDetails({ ...event, data: { id: '42' } });
 
-      expect(values[0]).toBe('42');
-    });
+    expect(selectFn).toHaveBeenCalled();
   });
 });
