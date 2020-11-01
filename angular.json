@@ -71,7 +71,8 @@
           "options": {
             "browserTarget": "hestia-ui:build",
             "extraWebpackConfig": "./cypress/coverage.webpack.js",
-            "sourceMap": true
+            "sourceMap": true,
+            "proxyConfig": "./proxy.conf.json"
           },
           "configurations": {
             "production": {
