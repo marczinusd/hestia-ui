@@ -33,7 +33,7 @@ describe('DashboardComponent', () => {
   });
 
   it('should contain expected snapshots header', () => {
-    expect(spectator.query('h2')).toHaveText('Your snapshots');
+    expect(spectator.query('h1')).toHaveText('Your snapshots');
   });
 
   it('should render one snapshot header card', () => {

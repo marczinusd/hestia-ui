@@ -20,10 +20,18 @@ describe('FileDetailsComponent', () => {
     providers: [mockProvider(FileDetailsService)]
   });
   const lines: Line[] = [
-    { content: 'hello', lineNumber: 1, numberOfAuthors: 2, numberOfChanges: 3, isCovered: true },
-    { content: 'world', lineNumber: 2, numberOfAuthors: 2, numberOfChanges: 3, isCovered: true }
+    { content: 'hello', lineNumber: 1, numberOfAuthors: 2, numberOfChanges: 3, isCovered: true, conditionCoverage: '', isBranched: false, hitCount: 0 },
+    { content: 'world', lineNumber: 2, numberOfAuthors: 2, numberOfChanges: 3, isCovered: true, conditionCoverage: '', isBranched: false, hitCount: 0 }
   ];
-  const file: File = { lines, path: 'bla.ts', lifetimeAuthors: 2, lifetimeChanges: 3, coveragePercentage: 50, id: '1' };
+  const file: File = {
+    lines,
+    path: 'bla.ts',
+    lifetimeAuthors: 2,
+    lifetimeChanges: 3,
+    coveragePercentage: 50,
+    id: '1',
+    filename: 'bla.ts'
+  };
 
   beforeEach(() => (spectator = createComponent()));
 
@@ -88,7 +96,7 @@ describe('FileDetailsComponent', () => {
       selection.selectFile('1');
       testScheduler.flush();
 
-      expect(spectator.component.code).toBe('hello\nworld');
+      expect(spectator.component.code.split('\n')).toEqual(['hello    // HC: 0 DA: 2 CC: 3 ', 'world    // HC: 0 DA: 2 CC: 3 ']);
     });
   });
 
