@@ -25,6 +25,12 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
     js: 'javascript',
     cs: 'csharp'
   };
+
+  extToCommentSymbolMap = {
+    ts: '//',
+    js: '//',
+    cs: '//'
+  };
   showError: boolean;
 
   private static lineSort(first: Line, second: Line): number {
@@ -47,9 +53,16 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
     this.selectedFileSubscription = this.selectionService.selectedFileId.pipe(switchMap((val) => this.service.getFileDetails(val))).subscribe(
       (details) => {
         this.file = details;
+        const maxLineWidth = Math.max(...details.lines.map((l) => l.content.length));
         this.code = details.lines
           .sort(FileDetailsComponent.lineSort)
-          .map((l) => l.content)
+          .map((l) => {
+            const tabs = ' '.repeat(maxLineWidth - l.content.length);
+
+            return `${l.content}${tabs}${this.mapExtensionsToCommentSymbol(details.path)} HC: ${l.hitCount} DA: ${l.numberOfAuthors} CC: ${l.numberOfChanges} ${
+              l.isBranched ? l.conditionCoverage : ''
+            }`;
+          })
           .join('\n');
         this.editorOptions = { ...this.editorOptions, language: this.mapExtensionToMonacoLanguage(details.path) };
         this.loading = false;
@@ -65,6 +78,12 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
 
   public hideError(): void {
     this.showError = false;
+  }
+
+  private mapExtensionsToCommentSymbol(filePath: string): string {
+    const ext = filePath.split('.').pop();
+
+    return this.extToCommentSymbolMap[ext];
   }
 
   private mapExtensionToMonacoLanguage(filePath: string): string {

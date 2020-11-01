@@ -4,4 +4,7 @@ export interface Line {
   numberOfChanges: number;
   numberOfAuthors: number;
   isCovered: boolean;
+  hitCount: number;
+  conditionCoverage: string;
+  isBranched: boolean;
 }

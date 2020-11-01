@@ -5,9 +5,9 @@
     <mat-card-title>{{ header.name }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p>
-      Lorem ipsum
-    </p>
+    <p>Snapshot ID: {{ header.id }}</p>
+    <p>Snapshot at hash: {{ header.atHash }}</p>
+    <p>Date of last commit: {{ header.commitDate }}</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-flat-button class="open-snapshot-button" (click)="openSnapshot(header.id)">Open</button>
@@ -24,6 +24,4 @@
   <button mat-flat-button class="hide-error-button" (click)="hideError()">OK</button>
 </div>
 
-<button mat-flat-button color="primary" class="refresh-button" [disabled]="isLoading" (click)="refreshSnapshots()">
-  Refresh snapshots
-</button>
+<button mat-flat-button color="primary" class="refresh-button" [disabled]="isLoading" (click)="refreshSnapshots()">Refresh snapshots</button>
