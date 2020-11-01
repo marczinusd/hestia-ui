@@ -1,8 +1,11 @@
 <ag-grid-angular
-  style="width: calc(100% - 10px); height: 500px; margin-left: 10px;"
-  class="ag-theme-alpine"
+  class="ag-theme-alpine-dark snapshot-grid"
   (rowDoubleClicked)="openFileDetails($event)"
   [rowData]="rowData"
   [columnDefs]="columnDefs"
+  [gridOptions]="options"
+  (gridReady)="gridReady($event)"
+  [defaultColDef]="defaultColDef"
+  [frameworkComponents]="frameworkComponents"
 >
 </ag-grid-angular>

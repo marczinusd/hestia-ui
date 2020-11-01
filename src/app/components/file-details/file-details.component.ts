@@ -53,7 +53,7 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
     this.selectedFileSubscription = this.selectionService.selectedFileId.pipe(switchMap((val) => this.service.getFileDetails(val))).subscribe(
       (details) => {
         this.file = details;
-        const maxLineWidth = Math.max(...details.lines.map((l) => l.content.length));
+        const maxLineWidth = Math.max(...details.lines.map((l) => l.content.length)) + 4;
         this.code = details.lines
           .sort(FileDetailsComponent.lineSort)
           .map((l) => {

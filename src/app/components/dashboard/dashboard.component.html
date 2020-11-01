@@ -1,4 +1,4 @@
-<h2>Your snapshots</h2>
+<h1>Your snapshots</h1>
 
 <mat-card class="snapshot-card" *ngFor="let header of headers">
   <mat-card-header>
@@ -10,7 +10,7 @@
     <p>Date of last commit: {{ header.commitDate }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button class="open-snapshot-button" (click)="openSnapshot(header.id)">Open</button>
+    <button mat-button class="open-snapshot-button" (click)="openSnapshot(header.id)">Open</button>
   </mat-card-actions>
 </mat-card>
 

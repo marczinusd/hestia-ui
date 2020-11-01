@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ColDef, RowDoubleClickedEvent } from 'ag-grid-community';
+import { ColDef, ColumnApi, GridApi, GridOptions, GridReadyEvent, RowDoubleClickedEvent } from 'ag-grid-community';
 import { FileDetailsService } from '../../services/file-details.service';
 import { File } from '../../model/file';
 import { SelectionService } from '../../services/selection.service';
 import { switchMap } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
+import { ButtonCellRendererComponent } from '../button-cell-renderer/button-cell-renderer.component';
 
 @Component({
   selector: 'app-snapshot-statistics',
@@ -16,22 +17,47 @@ export class SnapshotStatisticsComponent implements OnInit, OnDestroy {
 
   public columnDefs: (ColDef | { field: keyof File })[] = [
     {
-      field: 'path',
-      sortable: true
+      field: 'filename'
     },
     {
-      field: 'lifetimeAuthors',
-      sortable: true
+      field: 'path'
     },
     {
-      field: 'lifetimeChanges',
-      sortable: true
+      field: 'lifetimeAuthors'
     },
     {
-      field: 'coveragePercentage',
-      sortable: true
+      field: 'lifetimeChanges'
+    },
+    {
+      field: 'coveragePercentage'
+    },
+    {
+      field: 'id'
+    },
+    {
+      field: 'open',
+      cellRenderer: 'buttonCellRenderer',
+      headerName: '',
+      cellRendererParams: {
+        clicked: (field: { data: File }): void => {
+          this.selectionService.selectFile(field.data.id);
+        }
+      },
+      minWidth: 90
     }
   ];
+  public defaultColDef: ColDef = {
+    sortable: true,
+    resizable: true,
+    flex: 1,
+    filter: true
+  };
+
+  public frameworkComponents;
+
+  options: GridOptions = {};
+  gridApi: GridApi;
+  columnApi: ColumnApi;
 
   public rowData: File[] = [];
   private selectedSnapshotSubscription: Subscription;
@@ -43,15 +69,23 @@ export class SnapshotStatisticsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.frameworkComponents = {
+      buttonCellRenderer: ButtonCellRendererComponent
+    };
     this.selectedSnapshotSubscription = this.selectionService.selectedSnapshotId
       .pipe(switchMap((id) => this.fileDetailsService.getAllFilesForSnapshot(id)))
       .subscribe((val) => {
-        this.rowData = val.map((f) => {
-          return {
-            ...f,
-            path: f.path.split('\\').pop().split('/').pop()
-          };
-        });
+        this.rowData = val.map((f) => ({
+          ...f,
+          filename: f.path.split('\\').pop().split('/').pop()
+        }));
+        this.columnApi?.autoSizeAllColumns();
+        this.gridApi?.sizeColumnsToFit();
       });
+  }
+
+  gridReady($event: GridReadyEvent): void {
+    this.gridApi = $event.api;
+    this.columnApi = $event.columnApi;
   }
 }

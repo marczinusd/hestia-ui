@@ -1,6 +1,4 @@
-<div style="height: 700px">
-  <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code" style="height: 100%"></ngx-monaco-editor>
-</div>
+<ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code" class="editor"></ngx-monaco-editor>
 <div class="spinner-container" *ngIf="loading">
   <mat-spinner></mat-spinner>
   <p>Loading file details...</p>

@@ -26,6 +26,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { FileDetailsComponent } from './components/file-details/file-details.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { FormsModule } from '@angular/forms';
+import { ButtonCellRendererComponent } from './components/button-cell-renderer/button-cell-renderer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FormsModule } from '@angular/forms';
     SnapshotDetailsComponent,
     HeaderComponent,
     SnapshotStatisticsComponent,
-    FileDetailsComponent
+    FileDetailsComponent,
+    ButtonCellRendererComponent
   ],
   imports: [
     BrowserModule,
