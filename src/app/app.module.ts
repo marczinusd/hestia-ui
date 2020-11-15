@@ -1,63 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { FilesModule } from '@modules/files/files.module';
+import { SnapshotsModule } from '@modules/snapshots/snapshots.module';
+import { API_BASE_URL } from '@shared/config/tokens';
+import { SharedModule } from '@shared/shared.module';
+
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SnapshotDetailsComponent } from './components/snapshot-details/snapshot-details.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { HttpClientModule } from '@angular/common/http';
-import { environment } from '../environments/environment';
-import { API_BASE_URL } from './services/snapshots.service';
-import { MatTabsModule } from '@angular/material/tabs';
-import { SnapshotStatisticsComponent } from './components/snapshot-statistics/snapshot-statistics.component';
-import { MatTableModule } from '@angular/material/table';
-import { AgGridModule } from 'ag-grid-angular';
-import { FileDetailsComponent } from './components/file-details/file-details.component';
-import { MonacoEditorModule } from 'ngx-monaco-editor';
-import { FormsModule } from '@angular/forms';
-import { ButtonCellRendererComponent } from './components/button-cell-renderer/button-cell-renderer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    PageNotFoundComponent,
-    DashboardComponent,
-    SnapshotDetailsComponent,
-    HeaderComponent,
-    SnapshotStatisticsComponent,
-    FileDetailsComponent,
-    ButtonCellRendererComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
     LayoutModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule,
-    MatProgressSpinnerModule,
+    SnapshotsModule,
+    FilesModule,
     HttpClientModule,
-    MatTabsModule,
-    MatTableModule,
-    AgGridModule.withComponents([]),
-    MonacoEditorModule.forRoot(),
-    FormsModule
+    SharedModule,
+    environment.production ? [] : AkitaNgDevtools.forRoot(),
+    AkitaNgRouterStoreModule.forRoot()
   ],
   providers: [{ provide: API_BASE_URL, useFactory: () => environment.apiRoot }],
   bootstrap: [AppComponent]
