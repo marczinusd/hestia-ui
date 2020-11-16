@@ -1,14 +1,16 @@
-/// <reference types="cypress"/>
-
 describe('Dashboard', () => {
   beforeEach(() => {
-    cy.visit('/dashboard');
-
     cy.server();
 
-    cy.route('GET', '/snapshots', 'fixture:snapshots.json');
-    cy.route('GET', '/snapshots/*/files', 'fixture:files.json');
-    cy.route('GET', '/files/*', 'fixture:file-details.json');
+    cy.fixture('snapshots.json').as('snapshots');
+    cy.fixture('files.json').as('files');
+    cy.fixture('file-details.json').as('file-details');
+
+    cy.route('GET', '**/snapshots', '@snapshots');
+    cy.route('GET', '**/snapshots/*/files', '@files');
+    cy.route('GET', '**/files/*', '@file-details');
+
+    cy.visit('/dashboard');
   });
 
   it('shows snapshots header', () => {
