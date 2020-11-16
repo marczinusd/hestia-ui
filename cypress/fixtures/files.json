@@ -1,0 +1,1748 @@
+﻿[
+  {
+    "id": "db11ffd8-c011-45c1-8c2c-14d104c67a2d",
+    "path": "/home/marczinusd/dev/vue/src/server/render-context.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 11,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ce640a55-6b52-42a9-bcd9-e6a3b6188f1b",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/node-ops.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 15,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "efad189f-553b-4847-80a0-72bc6253f690",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 15,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f8b312f5-2c0c-4b05-906d-b990ad1dee40",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/util.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3548b0de-380a-4645-9889-69fd7cd2d8dd",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/options.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "38d4c668-4ab6-4f35-8de4-8179080324bd",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/util/element.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ec4dc910-1399-4566-966a-6a2a99d9f281",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/util/parser.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "4d409af9-348a-48d7-ab1d-689186deaa4d",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/util/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 16,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3bd00ff3-c184-4f82-a71b-e2f883dca670",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/text-node.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "e474adee-09e6-4586-984d-cc8048aa0a5f",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/patch.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "94e8337a-8705-4ceb-88f1-0bcacccce276",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/transition-util.js",
+    "coveragePercentage": 97.18309859154929577464788732,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 20,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ebcd6bc0-91e6-44c1-b1e9-3785fea39a0d",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "23024cd0-41c1-4238-9bf2-99b1ad864950",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 10,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "34bf656c-f6a6-492c-b876-425bbfcc3cd0",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/directives/show.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "d036aaac-33d3-40ef-ac31-90e07f7d579b",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/directives/model.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f6683647-b12d-4fd0-9630-5b13a7878758",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/directives/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ab9ef5aa-d913-4395-9e11-1787da691916",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/modules/dom-props.js",
+    "coveragePercentage": 84.44444444444444444444444444,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 12,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "e51df3e1-e82a-4493-b3ae-dae3bd5c08ce",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/modules/class.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 12,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "542ecfcb-6d51-42f1-8db6-056927131140",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/modules/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "068eca4f-4928-4898-a3f8-f65e9510824f",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/modules/attrs.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 25,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "b31c5f3c-6c3d-4596-adee-f6772f7a7bba",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/modules/style.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 23,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "362e8607-3277-4305-b8c1-52176f8a3ed6",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/node-ops.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 11,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "993d8b4d-1a61-4ef9-8dd1-0e105cbf0655",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/directives/show.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 24,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "6b293c6a-ee20-4f5f-995c-c1f74312d401",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "88c17977-c2fe-47fc-ad64-2b8d5aef6277",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/class-util.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 16,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "04dc200e-ab04-4368-abf2-24f2163958d8",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/modules/ref.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 11,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "820a6b37-df4f-4074-ae42-cad1a3f66c63",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/bind-object-props.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "205766d9-7141-4412-aeca-0ca14ff3a978",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/resolve-scoped-slots.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f4f753e3-0cfd-4639-b738-8d152cbd1c58",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "4018d1c8-d935-488e-8449-2689fa4b525f",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/bind-dynamic-keys.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 3,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "2e02549e-c090-4ed9-8dd8-685b6922b40c",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/render-slot.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "180971e1-4724-4c6a-a8bb-632d1aac50b6",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/render-list.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "e4d6916b-d746-46fd-b513-7cf84649fdd3",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/bind-object-listeners.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3c16bdfc-3412-4c79-93c5-2797a3ec6abf",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/render-static.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "68e776f3-7645-49ec-8f22-6b1e5a7d33d1",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/patch.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "e9228a00-bb2a-45a3-b9cb-21bcb4b4fc04",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/resolve-slots.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 19,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f3ef9d13-56e7-4e79-8a38-18a2457592fc",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/check-keycodes.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f03745af-0d65-4bab-921a-b1b7d83cf2cb",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/compiler.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "81198b61-3155-40fd-9d32-c5bd79174599",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/server/util.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 10,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "143df814-1b25-4d50-86b7-3e822b5a8851",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/util/element.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 22,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "cb4045bd-51b4-4c86-864c-02c60106284f",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/util/class.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 15,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "749fa409-ca44-4a5c-8cf0-48d4fe7cc873",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/util/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 14,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a0e42bb7-b31f-46d2-b812-1f7ea11228ef",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/util/attrs.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 20,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3fb3d0e0-0675-4d3e-809f-6a7aa116230a",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/util/style.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "41246c06-d4c9-4d62-9fa1-dcf36a0d5447",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/util/compat.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "0eb568a8-7713-4986-aef8-cb21afea8ece",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render-helpers/resolve-filter.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "eec6fe61-4583-4c35-84f8-3db396d817b6",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/directives/model.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 43,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f46979fc-2ea3-4488-bc6c-7361f41f6af2",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/directives/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "176952f1-2589-4f19-9339-28ff70eda4fe",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/components/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "e7c50623-3e6f-4d6c-80c9-f48d0846a1e9",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/modules/class.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "5248dade-d025-433b-b625-547389d5d0ff",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/modules/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c8ff20e5-f937-4c3b-8272-1ef494cd268b",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/modules/attrs.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3bbf1724-9b18-4a33-80b2-4dabe76ba64b",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/modules/style.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "48017f42-b8ce-4f71-9838-1760b425c836",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/modules/transition.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 11,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "b79f24a5-4187-46c3-8f1a-8c13bd497097",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/directives/model.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "5c63ba55-82ab-49d1-9be0-a182d9ef362e",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/directives/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "8cbaf4f8-59b1-440e-8da8-34e7b53e656b",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/class.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c1fb05f7-fcfa-4302-a64b-d25608975125",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "5e8db3d8-69a2-4f19-86a3-98f90c28fff7",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/modules/events.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "739770d6-5857-4ae4-81a9-a599200d7b14",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/props.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "56c3779b-7e54-4a27-b71a-705cbc585827",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/style.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "05a0f958-7df0-4584-ac89-3c0530d2921e",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/v-on.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "0d9bf825-d1c6-4275-99d1-f0a54f392760",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/recycle-list.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c2e30940-6ae1-4816-b109-fadf4090bece",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/v-once.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "7f6e3594-f729-41d1-99a3-2e9878ade277",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/text.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "9e275fa5-d877-438b-9a4c-6cdf1609dbc3",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/component-root.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a48ae83b-76ee-40d3-ad72-236bfadfa721",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/v-bind.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "86fd3f61-9e1e-410d-a2df-0732947c1647",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 19,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "713698c0-15c4-456d-b9b2-5f305b621f54",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/v-if.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "5ab4ccf0-f7cd-4f81-aee3-9bd67ab4379c",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/append.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c261c667-450c-4291-a9a4-1a3cd0603ba1",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/recycle-list/render-component-template.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f49adb90-38d2-40c3-9b40-77ebfbb2ece5",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/recycle-list/virtual-component.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "9173b127-4bc7-4822-9370-4fdee4b20f47",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/components/richtext.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "7feba11f-fd83-4732-8b7e-853149921a36",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/components/transition-group.js",
+    "coveragePercentage": 98.79518072289156626506024096,
+    "lifetimeAuthors": 3,
+    "lifetimeChanges": 26,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "48b97f4b-d3f3-4932-87a2-57d93b032d23",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/components/transition.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 54,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "5ff70f85-a393-44a6-afb8-435b48a8eb3e",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/modules/dom-props.js",
+    "coveragePercentage": 84.44444444444444444444444444,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 34,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "b423fc3f-c7cc-4891-ad29-38d7ef3042a4",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/modules/events.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 35,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "cb92a37c-2aa6-4c0d-a953-d9c98e407085",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/modules/class.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "4496870a-fee4-4df6-b6fd-6bf78773bca7",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/modules/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "61051d7e-39a3-420d-b32c-ec2fab68cc23",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/modules/attrs.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 26,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "b1e8a9a3-0177-4fdc-9a46-83b2a878df9a",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/modules/style.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 28,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "fc5892e6-a14b-44b7-b0fd-30287a387e44",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/runtime/modules/transition.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 73,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3966dbf0-c0b8-432a-a8af-78e877e9d48f",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/directives/html.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3298d588-56bd-4f76-82a3-4a1034cd6a43",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/directives/model.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 52,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ed045f9e-c1ce-4620-befc-a5eafbbac399",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/directives/text.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c5f72e93-6f8d-45b3-8d71-6deb4ea28232",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/directives/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "4a1e6a53-aa26-4dce-8a66-25238aebc121",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/modules/model.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ada5078f-36b3-4431-92f0-542a4b14adab",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/modules/class.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "8986a284-e68d-46fc-bfb2-8f8f05071a24",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/modules/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "863c4367-ca85-4ca5-b1ec-c3b7b2348537",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/compiler/modules/style.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 11,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3d3b8f5a-4ccb-483a-97bb-c35648aba5f3",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/directives/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "50b72493-3fae-4dce-b677-c6e20d60bd53",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/components/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "4aabc757-58c9-42ed-8d85-e7fc651fa86c",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/components/transition-group.js",
+    "coveragePercentage": 98.79518072289156626506024096,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "b33bfc93-da23-4c61-a386-8fec36ce5176",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/runtime/components/transition.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "5e1d43a8-1910-4c0e-84af-c37f66804347",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/modules/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "fe2ea40f-95fd-4b8f-b523-380894f10a4d",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/modules/directives.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 25,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a30643bb-f278-4aeb-9a65-cd14e44b5e28",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/is-async-placeholder.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "95986a91-0df9-42c1-b5da-7a852932d55f",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/normalize-children.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 22,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "4b0eb260-c4bb-4b5c-b064-32cc53938034",
+    "path": "/home/marczinusd/dev/vue/src/server/optimizing-compiler/modules.js",
+    "coveragePercentage": 3.44827586206896551724137931,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ba47003c-eb40-4fdd-8560-3bbb5a2b9d1c",
+    "path": "/home/marczinusd/dev/vue/src/server/optimizing-compiler/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ffdbe0ad-07df-4338-8c4d-f9cabcec5345",
+    "path": "/home/marczinusd/dev/vue/src/server/optimizing-compiler/runtime-helpers.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 14,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "dd248a17-ebad-4155-b3e3-2d96d2a4031f",
+    "path": "/home/marczinusd/dev/vue/src/server/optimizing-compiler/codegen.js",
+    "coveragePercentage": 48.45360824742268041237113402,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 26,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "083d27bc-717f-4f99-9875-fe5f9a7ae24d",
+    "path": "/home/marczinusd/dev/vue/src/server/optimizing-compiler/optimizer.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 13,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "5ac51b7d-db01-4a6c-8239-3ed3a5572489",
+    "path": "/home/marczinusd/dev/vue/src/server/webpack-plugin/server.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "04de7491-04d1-4509-a096-16808d977c05",
+    "path": "/home/marczinusd/dev/vue/src/server/webpack-plugin/client.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "675b1649-3c02-4f4c-ba06-1ec0f6a956bc",
+    "path": "/home/marczinusd/dev/vue/src/server/webpack-plugin/util.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f148f10c-9e16-48e2-ba07-e77a4c6a480a",
+    "path": "/home/marczinusd/dev/vue/src/core/observer/watcher.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 3,
+    "lifetimeChanges": 40,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "bd533684-e54b-4854-9681-ea80ad87852c",
+    "path": "/home/marczinusd/dev/vue/src/server/template-renderer/template-stream.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 10,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "10ad6051-4825-41d4-853a-40e66bff35bb",
+    "path": "/home/marczinusd/dev/vue/src/core/observer/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 45,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c22f4357-7bbb-4f2c-9998-520cffc1dbfd",
+    "path": "/home/marczinusd/dev/vue/src/core/observer/array.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "794a55c1-ed56-4c69-84db-a6ee2c949785",
+    "path": "/home/marczinusd/dev/vue/src/core/observer/scheduler.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 27,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "d79a1149-e84a-4f54-88c8-08d33b15d331",
+    "path": "/home/marczinusd/dev/vue/src/core/observer/dep.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 11,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c59514b7-3dcc-449c-b932-9bb108dd7079",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/create-component.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 4,
+    "lifetimeChanges": 112,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ca961173-1109-4e4b-9c6f-e32485c893a6",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/vnode.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 49,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "84a7b650-5f78-4dad-8930-62b3f9c92aef",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/patch.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 119,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "53a81de0-9e68-4545-b3d4-05695292440b",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/create-element.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 55,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "6162c276-bc79-4060-a63f-4ece22d30689",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/create-functional-component.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 26,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "0a31437b-d424-4cbd-ac90-9de32be426cb",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/proxy.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 20,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a407f2ce-ad21-4e08-8f09-dcebc9c24027",
+    "path": "/home/marczinusd/dev/vue/src/core/observer/traverse.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "d4a8ed27-0521-4b0d-99f5-0fd92b586e0d",
+    "path": "/home/marczinusd/dev/vue/src/server/template-renderer/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 35,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f37831e6-83cd-4d68-85c5-4171b5756796",
+    "path": "/home/marczinusd/dev/vue/src/server/template-renderer/parse-template.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c6c94f30-e479-4b75-80db-338f733714cd",
+    "path": "/home/marczinusd/dev/vue/src/server/template-renderer/create-async-file-mapper.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "16eb15ec-275e-4a5b-8d70-dd79c3fc9f01",
+    "path": "/home/marczinusd/dev/vue/src/server/render-stream.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 18,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3c4c738f-3ea4-4d38-a9f2-0e5972424175",
+    "path": "/home/marczinusd/dev/vue/src/server/render.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 72,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "5a084ca9-d586-4bfd-9089-5dbd4250e9e8",
+    "path": "/home/marczinusd/dev/vue/src/server/write.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "0482a0cf-cc0c-48ec-ade0-e51d36fde70c",
+    "path": "/home/marczinusd/dev/vue/src/server/util.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "50bb25d4-01d9-4e34-9706-3f378e7222e2",
+    "path": "/home/marczinusd/dev/vue/src/server/create-renderer.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 3,
+    "lifetimeChanges": 45,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ed46302f-c3be-41df-b5f5-43d3aca4a56f",
+    "path": "/home/marczinusd/dev/vue/src/server/create-basic-renderer.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "39b6fcd9-2eb7-479a-9bd9-7407eb11495a",
+    "path": "/home/marczinusd/dev/vue/src/sfc/parser.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 17,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "dc44c242-73b2-4c0e-8d0f-197622d808a0",
+    "path": "/home/marczinusd/dev/vue/src/shared/constants.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "1bf8ab3c-1fe9-4913-887b-8e83beadd321",
+    "path": "/home/marczinusd/dev/vue/src/shared/util.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 65,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3cf1f884-787b-495d-a4c0-d58d81f69e07",
+    "path": "/home/marczinusd/dev/vue/src/core/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 48,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "b276a24d-248f-4bc8-b4b6-ed4042cec3be",
+    "path": "/home/marczinusd/dev/vue/src/core/config.js",
+    "coveragePercentage": 0.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 44,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "de96cb4c-6b02-4ebf-90d6-3c0d76b37bfc",
+    "path": "/home/marczinusd/dev/vue/src/compiler/codeframe.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "8e62dac2-254d-44e3-b16e-b3bcba32833c",
+    "path": "/home/marczinusd/dev/vue/src/compiler/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 22,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "65316b7b-335e-4aba-a40e-baf6c399fe98",
+    "path": "/home/marczinusd/dev/vue/src/compiler/to-function.js",
+    "coveragePercentage": 90.625,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 7,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c1d64baf-7dba-470d-8bac-887ea213b6de",
+    "path": "/home/marczinusd/dev/vue/src/compiler/create-compiler.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "9f64e696-d5e8-4f49-8c92-d5558cb4baec",
+    "path": "/home/marczinusd/dev/vue/src/compiler/error-detector.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 18,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a55133ba-f6c8-46ec-b754-4fdc92358aba",
+    "path": "/home/marczinusd/dev/vue/src/compiler/optimizer.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 29,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "ce9e3f5f-8971-4134-9359-2828211d937a",
+    "path": "/home/marczinusd/dev/vue/src/compiler/helpers.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 46,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c62fd136-1b8f-4465-b8b1-3676e695dc81",
+    "path": "/home/marczinusd/dev/vue/src/server/bundle-renderer/create-bundle-runner.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 17,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "28724562-d765-47ad-a870-7d8a613d3a8e",
+    "path": "/home/marczinusd/dev/vue/src/server/bundle-renderer/create-bundle-renderer.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 10,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "61b646d1-8d7f-493d-a793-931d020dccff",
+    "path": "/home/marczinusd/dev/vue/src/server/bundle-renderer/source-map-support.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "fd569eef-237e-458e-a766-985b0c78330f",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/init.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 33,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "04321b81-a7df-408f-8562-98451cbb7ee8",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/component.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a1433ec6-94b5-4bd0-87b4-388d45dcbd30",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/events.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 26,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "32d48c06-4013-49bb-b2be-832eb6b7449f",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/inject.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 27,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "193640c9-9d1d-4cd4-a7f0-69ae3f59ce38",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/entry-framework.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 15,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "9677ba15-e0c8-495b-b34b-44c7917552f2",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/entry-runtime-factory.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "54b1fbbc-0f5e-4837-82ad-0878e45b6a59",
+    "path": "/home/marczinusd/dev/vue/src/compiler/codegen/events.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 53,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "66c7bcb9-8996-4e99-ae29-d7187840f32c",
+    "path": "/home/marczinusd/dev/vue/src/compiler/codegen/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 3,
+    "lifetimeChanges": 160,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "445e6b1f-f013-4bd1-9bcb-84db44a98a2c",
+    "path": "/home/marczinusd/dev/vue/src/compiler/directives/model.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 8,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "83655817-656d-4151-abaf-a4dc7a049d47",
+    "path": "/home/marczinusd/dev/vue/src/compiler/directives/on.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "1563319d-79fc-4678-88e3-10c34e118f15",
+    "path": "/home/marczinusd/dev/vue/src/compiler/directives/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "e97a6882-0b3a-4201-a629-9b7e90676028",
+    "path": "/home/marczinusd/dev/vue/src/compiler/directives/bind.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "4d688c6c-3063-4c49-b331-2247fec27b6f",
+    "path": "/home/marczinusd/dev/vue/src/compiler/parser/text-parser.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 16,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "717693a7-36aa-4c4f-bbe0-40840897fbd0",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/entry-compiler.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a815717e-6b5b-428c-b902-0f205547d0e5",
+    "path": "/home/marczinusd/dev/vue/src/compiler/parser/filter-parser.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 10,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "3fcb385a-d8cf-4a34-b5e6-796ca107b2a1",
+    "path": "/home/marczinusd/dev/vue/src/compiler/parser/html-parser.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 3,
+    "lifetimeChanges": 61,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "140c2eb0-4ffd-4039-8b84-be16a3c668a3",
+    "path": "/home/marczinusd/dev/vue/src/compiler/parser/entity-decoder.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "2a80b4f2-6377-4e94-8c9e-0284a722f872",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/extract-props.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "d67fcc1d-b746-499e-aa12-3df790e97a83",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a7a5aadd-aa4d-450e-b81a-f093dbd60ba3",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/get-first-component-child.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f5a56c80-21c2-42b8-9a91-10d6432d1e4c",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/normalize-scoped-slots.js",
+    "coveragePercentage": 96.66666666666666666666666667,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 27,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "8012cf12-2ffd-4729-a992-db73dad50e35",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/resolve-async-component.js",
+    "coveragePercentage": 98.52941176470588235294117647,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 21,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "2dcc98c4-0015-4f6d-b7aa-f9927bbc8897",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/merge-hook.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "83893727-5260-42b2-b240-2912f9648900",
+    "path": "/home/marczinusd/dev/vue/src/core/vdom/helpers/update-listeners.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 20,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c159a5fd-e879-47d9-9663-4230730f0a7f",
+    "path": "/home/marczinusd/dev/vue/src/compiler/parser/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 4,
+    "lifetimeChanges": 206,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "b079c047-d190-420c-bd29-36dfed09b115",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/entry-runtime.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "1f30fe39-a243-48c1-b7f7-821a40a4f8dc",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/entry-server-basic-renderer.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "b07c487d-94a0-4035-a3f8-8104ccc64dcd",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/entry-runtime-with-compiler.js",
+    "coveragePercentage": 91.42857142857142857142857143,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "d9630434-cd77-4ec5-89f8-c64dc7c4f2a9",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/render.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 122,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "638e6f6a-62e6-46b5-9908-f2896864d829",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/lifecycle.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 3,
+    "lifetimeChanges": 96,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "6ba02388-c78b-4c7e-a272-764cb3463e23",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/state.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 3,
+    "lifetimeChanges": 71,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "0554d2b5-e950-4a0c-904a-7efa2423199b",
+    "path": "/home/marczinusd/dev/vue/src/core/util/error.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 20,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "44e10cbc-f5a4-45b2-9bdd-0a21dcb3b808",
+    "path": "/home/marczinusd/dev/vue/src/core/util/perf.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 5,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "13055c5d-f036-4722-a530-87ac353c529a",
+    "path": "/home/marczinusd/dev/vue/src/core/util/env.js",
+    "coveragePercentage": 84.84848484848484848484848485,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 54,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "7e910c08-c06b-4bfb-877f-b228932b969d",
+    "path": "/home/marczinusd/dev/vue/src/core/util/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 6,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "900eb056-fcf6-4940-aef0-1d851537af6d",
+    "path": "/home/marczinusd/dev/vue/src/core/util/props.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 38,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "c79d4a2d-9bf7-43a2-8c17-0a814d5360ea",
+    "path": "/home/marczinusd/dev/vue/src/core/util/lang.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 14,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "a6dc0635-e201-454a-b3a3-b4e1420b07a6",
+    "path": "/home/marczinusd/dev/vue/src/core/util/next-tick.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 2,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "28801eae-2695-4552-949a-f536d6cb47cd",
+    "path": "/home/marczinusd/dev/vue/src/core/util/debug.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 23,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "7c5f11e4-e73e-46b8-bb9d-960bd145df6b",
+    "path": "/home/marczinusd/dev/vue/src/core/util/options.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 53,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "145a9345-ae73-4b46-a71e-53f3fc0f663b",
+    "path": "/home/marczinusd/dev/vue/src/core/components/keep-alive.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 31,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "63addd02-228b-4066-b081-dc4ce7c1eff8",
+    "path": "/home/marczinusd/dev/vue/src/core/components/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 2,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "1bf5d9af-cce0-4252-b64a-5d2befba4b52",
+    "path": "/home/marczinusd/dev/vue/src/core/global-api/extend.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 18,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "880364df-0b11-4462-ac34-5342e203075d",
+    "path": "/home/marczinusd/dev/vue/src/core/global-api/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 13,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "2bea05ec-ae68-4ba9-b332-aafbefbe2d66",
+    "path": "/home/marczinusd/dev/vue/src/core/global-api/assets.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 10,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "7775034f-e2c2-4dee-a11f-22a0fe5c55cb",
+    "path": "/home/marczinusd/dev/vue/src/core/global-api/mixin.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "1c8b1e25-91f4-4149-88bf-25071a4fb3c0",
+    "path": "/home/marczinusd/dev/vue/src/core/global-api/use.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 10,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "f9794222-0f63-4dd3-89c6-857416e006bc",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/entry-server-renderer.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 3,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "13a909a5-96d5-413e-b989-4c65b6b3ecdb",
+    "path": "/home/marczinusd/dev/vue/src/platforms/web/entry-compiler.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 4,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "90e57bcf-6f95-4a2d-9dec-d28dd247e3af",
+    "path": "/home/marczinusd/dev/vue/src/core/instance/index.js",
+    "coveragePercentage": 100.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  },
+  {
+    "id": "8f017664-cffc-49ac-8fea-08a810e573ba",
+    "path": "/home/marczinusd/dev/vue/src/platforms/weex/compiler/modules/recycle-list/v-for.js",
+    "coveragePercentage": -1.0,
+    "lifetimeAuthors": 1,
+    "lifetimeChanges": 9,
+    "lines": [],
+    "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+  }
+]

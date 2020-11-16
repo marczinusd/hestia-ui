@@ -1,0 +1,970 @@
+﻿{
+  "id": "13055c5d-f036-4722-a530-87ac353c529a",
+  "path": "/home/marczinusd/dev/vue/src/core/util/env.js",
+  "coveragePercentage": 84.84848484848484848484848485,
+  "lifetimeAuthors": 1,
+  "lifetimeChanges": 54,
+  "lines": [
+    {
+      "content": "  } catch (e) {}",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 34
+    },
+    {
+      "content": "}",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 35
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 36
+    },
+    {
+      "content": "// this needs to be lazy-evaled because vue may be required before",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 37
+    },
+    {
+      "content": "// vue-server-renderer can set VUE_ENV",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 38
+    },
+    {
+      "content": "let _isServer",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 39
+    },
+    {
+      "content": "export const isServerRendering = () => {",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 40
+    },
+    {
+      "content": "  if (_isServer === undefined) {",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (2/2)",
+      "hitCount": 2177,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 41
+    },
+    {
+      "content": "    /* istanbul ignore if */",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 42
+    },
+    {
+      "content": "    if (!inBrowser && !inWeex && typeof global !== 'undefined') {",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "50% (2/4)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 43
+    },
+    {
+      "content": "      // detect presence of vue-server-renderer and avoid",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 44
+    },
+    {
+      "content": "      // Webpack shimming the process",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 45
+    },
+    {
+      "content": "      _isServer = global['process'] && global['process'].env.VUE_ENV === 'server'",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 46
+    },
+    {
+      "content": "    } else {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 47
+    },
+    {
+      "content": "      _isServer = false",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 48
+    },
+    {
+      "content": "    }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 49
+    },
+    {
+      "content": "  }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 50
+    },
+    {
+      "content": "  typeof Reflect !== 'undefined' && isNative(Reflect.ownKeys)",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 64
+    },
+    {
+      "content": "  typeof Symbol !== 'undefined' && isNative(Symbol) &&",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (4/4)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 63
+    },
+    {
+      "content": "export const hasSymbol =",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 62
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 61
+    },
+    {
+      "content": "}",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 60
+    },
+    {
+      "content": "  return typeof Ctor === 'function' && /native code/.test(Ctor.toString())",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 59
+    },
+    {
+      "content": "    window.addEventListener('test-passive', null, opts)",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 33
+    },
+    {
+      "content": "export function isNative (Ctor: any): boolean {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 58
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 56
+    },
+    {
+      "content": "export const devtools = inBrowser && window.__VUE_DEVTOOLS_GLOBAL_HOOK__",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (2/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 55
+    },
+    {
+      "content": "// detect devtools",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 54
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 53
+    },
+    {
+      "content": "}",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 52
+    },
+    {
+      "content": "  return _isServer",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 2177,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 51
+    },
+    {
+      "content": "/* istanbul ignore next */",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 57
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 65
+    },
+    {
+      "content": "    }: Object)) // https://github.com/facebook/flow/issues/285",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 32
+    },
+    {
+      "content": "        supportsPassive = true",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 30
+    },
+    {
+      "content": "/* @flow */",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 1
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 2
+    },
+    {
+      "content": "// can we use __proto__?",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 3
+    },
+    {
+      "content": "export const hasProto = '__proto__' in {}",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 4
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 5
+    },
+    {
+      "content": "// Browser environment sniffing",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 6
+    },
+    {
+      "content": "export const inBrowser = typeof window !== 'undefined'",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 7
+    },
+    {
+      "content": "export const inWeex = typeof WXEnvironment !== 'undefined' && !!WXEnvironment.platform",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "50% (1/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 8
+    },
+    {
+      "content": "export const weexPlatform = inWeex && WXEnvironment.platform.toLowerCase()",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "50% (1/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 9
+    },
+    {
+      "content": "export const UA = inBrowser && window.navigator.userAgent.toLowerCase()",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (2/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 10
+    },
+    {
+      "content": "export const isIE = UA && /msie|trident/.test(UA)",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (2/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 11
+    },
+    {
+      "content": "export const isIE9 = UA && UA.indexOf('msie 9.0') > 0",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (2/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 12
+    },
+    {
+      "content": "export const isEdge = UA && UA.indexOf('edge/') > 0",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (2/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 13
+    },
+    {
+      "content": "export const isAndroid = (UA && UA.indexOf('android') > 0) || (weexPlatform === 'android')",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (3/3)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 14
+    },
+    {
+      "content": "export const isIOS = (UA && /iphone|ipad|ipod|ios/.test(UA)) || (weexPlatform === 'ios')",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (3/3)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 15
+    },
+    {
+      "content": "        /* istanbul ignore next */",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 29
+    },
+    {
+      "content": "      get () {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 28
+    },
+    {
+      "content": "    Object.defineProperty(opts, 'passive', ({",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 27
+    },
+    {
+      "content": "    const opts = {}",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 26
+    },
+    {
+      "content": "  try {",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 25
+    },
+    {
+      "content": "if (inBrowser) {",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "50% (1/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 24
+    },
+    {
+      "content": "      }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 31
+    },
+    {
+      "content": "export let supportsPassive = false",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 23
+    },
+    {
+      "content": "export const nativeWatch = ({}).watch",
+      "isCovered": true,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 21
+    },
+    {
+      "content": "// Firefox has a \"watch\" function on Object.prototype...",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 20
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 19
+    },
+    {
+      "content": "export const isFF = UA && UA.match(/firefox\\/(\\d+)/)",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (2/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 18
+    },
+    {
+      "content": "export const isPhantomJS = UA && /phantomjs/.test(UA)",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (2/2)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 17
+    },
+    {
+      "content": "export const isChrome = UA && /chrome\\/\\d+/.test(UA) && !isEdge",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "100% (3/3)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 16
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 22
+    },
+    {
+      "content": "let _Set",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 66
+    },
+    {
+      "content": "/* istanbul ignore if */ // $flow-disable-line",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 67
+    },
+    {
+      "content": "if (typeof Set !== 'undefined' && isNative(Set)) {",
+      "isCovered": true,
+      "isBranched": true,
+      "conditionCoverage": "67% (2/3)",
+      "hitCount": 1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 68
+    },
+    {
+      "content": "      this.set[key] = true",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 0,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 82
+    },
+    {
+      "content": "    add (key: string | number) {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 81
+    },
+    {
+      "content": "    }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 80
+    },
+    {
+      "content": "      return this.set[key] === true",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 0,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 79
+    },
+    {
+      "content": "    has (key: string | number) {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 78
+    },
+    {
+      "content": "    }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 77
+    },
+    {
+      "content": "    }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 83
+    },
+    {
+      "content": "      this.set = Object.create(null)",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 0,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 76
+    },
+    {
+      "content": "    set: Object;",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 74
+    },
+    {
+      "content": "  _Set = class Set implements SimpleSet {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 0,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 73
+    },
+    {
+      "content": "  // a non-standard Set polyfill that only works with primitive keys.",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 72
+    },
+    {
+      "content": "} else {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 71
+    },
+    {
+      "content": "  _Set = Set",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 70
+    },
+    {
+      "content": "  // use native Set when available.",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 69
+    },
+    {
+      "content": "    constructor () {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 75
+    },
+    {
+      "content": "    clear () {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 84
+    },
+    {
+      "content": "    }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 86
+    },
+    {
+      "content": "export { _Set }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 96
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 95
+    },
+    {
+      "content": "      this.set = Object.create(null)",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": 0,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 85
+    },
+    {
+      "content": "}",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 94
+    },
+    {
+      "content": "  add(key: string | number): mixed;",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 92
+    },
+    {
+      "content": "  has(key: string | number): boolean;",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 91
+    },
+    {
+      "content": "export interface SimpleSet {",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 2,
+      "lineNumber": 90
+    },
+    {
+      "content": "",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 89
+    },
+    {
+      "content": "}",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 88
+    },
+    {
+      "content": "  }",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 87
+    },
+    {
+      "content": "  clear(): void;",
+      "isCovered": false,
+      "isBranched": false,
+      "conditionCoverage": "",
+      "hitCount": -1,
+      "numberOfAuthors": 0,
+      "numberOfChanges": 1,
+      "lineNumber": 93
+    }
+  ],
+  "snapshotId": "5bac3c76-28e7-4f5b-a308-447fcc13e516"
+}
