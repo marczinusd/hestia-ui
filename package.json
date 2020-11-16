@@ -34,6 +34,7 @@
     "ag-grid-community": "^23.2.1",
     "chart.js": "^2.9.4",
     "chartjs": "^0.3.24",
+    "chartjs-plugin-annotation": "^0.5.7",
     "lodash": "^4.17.20",
     "ng2-charts": "^2.4.2",
     "ngx-monaco-editor": "^9.0.0",

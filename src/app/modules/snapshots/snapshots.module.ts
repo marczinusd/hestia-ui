@@ -9,6 +9,7 @@ import { ChartsModule } from 'ng2-charts';
 
 import { AuthorGroupsChartComponent } from './author-groups-chart/author-groups-chart.component';
 import { ChangeRangeBarChartComponent } from './change-range-bar-chart/change-range-bar-chart.component';
+import { CoverageOfTopFilesChartComponent } from './coverage-of-top-files-chart/coverage-of-top-files-chart.component';
 import { SnapshotStatsLineChartComponent } from './snapshot-stats-line-chart/snapshot-stats-line-chart.component';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SnapshotStatsLineChartComponent } from './snapshot-stats-line-chart/sna
     SnapshotStatsLineChartComponent,
     ChangeRangeBarChartComponent,
     ChangeRangeBarChartComponent,
-    AuthorGroupsChartComponent
+    AuthorGroupsChartComponent,
+    CoverageOfTopFilesChartComponent
   ]
 })
 export class SnapshotsModule {}
