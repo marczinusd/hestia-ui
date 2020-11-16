@@ -1,1 +1,17 @@
-<p>{{ currentSnapshot$ | async }}</p>
+<div class="grid-container">
+  <div class="grid-item" style="grid-row: 1">
+    <app-change-range-bar-chart barStepGranularity="5"></app-change-range-bar-chart>
+  </div>
+
+  <div class="grid-item" style="grid-row: 1">
+    <app-snapshot-stats-line-chart></app-snapshot-stats-line-chart>
+  </div>
+
+  <div class="grid-item" style="grid-row: 2">
+    <app-author-groups-chart></app-author-groups-chart>
+  </div>
+
+  <div class="grid-item" style="grid-row: 2">
+    <app-snapshot-stats-line-chart></app-snapshot-stats-line-chart>
+  </div>
+</div>

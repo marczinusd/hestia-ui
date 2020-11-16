@@ -5,8 +5,14 @@
 
 .refresh-button {
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 h1 {
   margin: 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }

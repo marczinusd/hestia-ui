@@ -32,6 +32,10 @@
     "@datorama/akita": "^4.22.0",
     "ag-grid-angular": "^23.2.1",
     "ag-grid-community": "^23.2.1",
+    "chart.js": "^2.9.4",
+    "chartjs": "^0.3.24",
+    "lodash": "^4.17.20",
+    "ng2-charts": "^2.4.2",
     "ngx-monaco-editor": "^9.0.0",
     "rxjs": "~6.6.3",
     "zone.js": "~0.10.3"
@@ -49,6 +53,7 @@
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@ngneat/spectator": "^5.13.4",
     "@types/jest": "^26.0.14",
+    "@types/lodash": "^4.14.165",
     "@types/node": "^14.11.2",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "babel-plugin-istanbul": "^6.0.0",

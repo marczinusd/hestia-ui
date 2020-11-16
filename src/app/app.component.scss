@@ -2,6 +2,7 @@ html,
 body,
 .app-frame {
   overflow: hidden;
+  overflow-y: scroll;
   margin: 0;
   height: 100%;
   box-sizing: border-box;

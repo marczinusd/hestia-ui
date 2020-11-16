@@ -1,18 +1,20 @@
 <h1>Your snapshots</h1>
 
-<mat-card class="snapshot-card" *ngFor="let header of headers">
-  <mat-card-header>
-    <mat-card-title>{{ header.name }}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>Snapshot ID: {{ header.id }}</p>
-    <p>Snapshot at hash: {{ header.atHash }}</p>
-    <p>Date of last commit: {{ header.commitDate }}</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button class="open-snapshot-button" (click)="openSnapshot(header.id)">Open</button>
-  </mat-card-actions>
-</mat-card>
+<div class="grid-container">
+  <mat-card class="snapshot-card grid-item" *ngFor="let header of headers">
+    <mat-card-header>
+      <mat-card-title>{{ header.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Snapshot ID: {{ header.id }}</p>
+      <p>Snapshot at hash: {{ header.atHash }}</p>
+      <p>Date of last commit: {{ header.commitDate }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button class="open-snapshot-button" (click)="openSnapshot(header.id)">Open</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
 
 <div class="spinner-container" *ngIf="isLoading">
   <mat-spinner></mat-spinner>

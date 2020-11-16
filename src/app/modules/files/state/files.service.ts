@@ -21,6 +21,7 @@ export class FilesService {
       tap((file) => {
         this.store.update(file.id, (state) => ({
           lines: file.lines,
+          filename: file.path.split('\\').pop().split('/').pop(),
           ...state
         }));
       })
@@ -34,7 +35,12 @@ export class FilesService {
 
     return this.http.get<File[]>(`${this.baseUrl}/snapshots/${snapshotId}/files`).pipe(
       tap((files) => {
-        this.store.upsertMany(files);
+        this.store.upsertMany(
+          files.map((f) => ({
+            filename: f.path.split('\\').pop().split('/').pop(),
+            ...f
+          }))
+        );
       })
     );
   }

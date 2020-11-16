@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <h1>Files grouped by ranges of no. of changes</h1>
+  </mat-card-header>
+  <mat-card-content>
+    <canvas
+      baseChart
+      class="chart-container"
+      [datasets]="lineChartData"
+      [labels]="lineChartLabels"
+      [options]="lineChartOptions"
+      [colors]="lineChartColors"
+      [legend]="lineChartLegend"
+      [chartType]="lineChartType"
+      [plugins]="lineChartPlugins"
+    >
+    </canvas>
+  </mat-card-content>
+</mat-card>
