@@ -3,7 +3,8 @@ import { FilesQuery } from '@modules/files/state/files.query';
 import { FilesService } from '@modules/files/state/files.service';
 import { File } from '@shared/model/file';
 import { Line } from '@shared/model/line';
-import { Subscription } from 'rxjs';
+import * as _ from 'lodash';
+import { Observable, Subscription } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 @Component({
@@ -17,6 +18,8 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
   public file: File;
   public code: string;
   public loading: boolean;
+  public isLoading$: Observable<boolean>;
+  public error$: Observable<string>;
   public editorOptions = { theme: 'vs-dark', language: 'javascript', readOnly: true, automaticLayout: true };
   private selectedFileSubscription: Subscription;
 
@@ -49,31 +52,26 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
-    this.loading = true;
-    this.selectedFileSubscription = this.filesQuery.activeId$.pipe(switchMap((val) => this.filesService.getFileDetails(val))).subscribe(
-      (details) => {
-        this.file = details;
-        const maxLineWidth = Math.max(...details.lines.map((l) => l.content.length)) + 4;
-        this.code = details.lines
-          .sort(FileDetailsComponent.lineSort)
-          .map((l) => {
-            const tabs = ' '.repeat(maxLineWidth - l.content.length);
-
-            return `${l.content}${tabs}${this.mapExtensionsToCommentSymbol(details.path)} HC: ${l.hitCount} DA: ${l.numberOfAuthors} CC: ${l.numberOfChanges} ${
-              l.isBranched ? l.conditionCoverage : ''
-            }`;
-          })
-          .join('\n');
-        this.editorOptions = { ...this.editorOptions, language: this.mapExtensionToMonacoLanguage(details.path) };
-        this.loading = false;
-      },
-      () => {
-        this.showError = true;
-      },
-      () => {
-        this.loading = false;
-      }
-    );
+    this.isLoading$ = this.filesQuery.selectLoading();
+    this.error$ = this.filesQuery.selectError();
+    this.error$.subscribe(() => {
+      this.showError = true;
+    });
+    this.selectedFileSubscription = this.filesQuery.activeId$.pipe(switchMap((val) => this.filesService.getFileDetails(val))).subscribe((details) => {
+      this.file = details;
+      const maxLineWidth = Math.max(...details.lines.map((l) => l.content.length)) + 4;
+      this.code = _.chain(details.lines)
+        .sortBy('lineNumber')
+        .map((l) => {
+          const tabs = ' '.repeat(maxLineWidth - l.content.length);
+          return `${l.content}${tabs}${this.mapExtensionsToCommentSymbol(details.path)} HC: ${l.hitCount} DA: ${l.numberOfAuthors} CC: ${l.numberOfChanges} ${
+            l.isBranched ? l.conditionCoverage : ''
+          }`;
+        })
+        .value()
+        .join('\n');
+      this.editorOptions = { ...this.editorOptions, language: this.mapExtensionToMonacoLanguage(details.path) };
+    });
   }
 
   public hideError(): void {

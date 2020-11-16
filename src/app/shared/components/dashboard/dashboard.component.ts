@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
   }
 
   openSnapshot(id: string): void {
-    this.service.selectSnapshot(id);
+    this.service.selectActive(id);
     this.router.navigate(['snapshots', id]);
   }
 

@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
+import { applyTransaction, withTransaction } from '@datorama/akita';
 import { API_BASE_URL } from '@shared/config/tokens';
 import { Snapshot } from '@shared/model/snapshot';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 import { SnapshotsStore } from './snapshots.store';
 
@@ -15,22 +16,41 @@ export class SnapshotsService {
     this.store.setLoading(true);
 
     return this.http.get<Snapshot>(`${this.baseUrl}/snapshots/${id}`).pipe(
-      tap((snapshot) => {
+      withTransaction((snapshot) => {
         this.store.upsert(snapshot.id, snapshot);
         this.store.setLoading(false);
+      }),
+      catchError((error) => {
+        applyTransaction(() => {
+          this.store.setLoading(false);
+          this.store.setError(error);
+        });
+
+        return throwError(error);
       })
     );
   }
 
   public getAllHeaders(): Observable<Snapshot[]> {
+    this.store.setLoading(true);
+
     return this.http.get<Snapshot[]>(`${this.baseUrl}/snapshots`).pipe(
-      tap((snapshots) => {
+      withTransaction((snapshots) => {
         this.store.set(snapshots);
+        this.store.setLoading(false);
+      }),
+      catchError((error) => {
+        applyTransaction(() => {
+          this.store.setLoading(false);
+          this.store.setError(error);
+        });
+
+        return throwError(error);
       })
     );
   }
 
-  public selectSnapshot(id: string): void {
+  public selectActive(id: string): void {
     this.store.setActive(id);
   }
 }

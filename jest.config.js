@@ -7,11 +7,15 @@ module.exports = {
     '<rootDir>/src/app/**/*.ts',
     '!<rootDir>/src/app/fakes/*.ts',
     '!<rootDir>/src/app/**/*.module.ts',
+    '!<rootDir>/src/app/**/*chart.component.ts',
+    '!<rootDir>/src/app/**/*mock.ts',
+    '!<rootDir>/src/app/**/*interceptor.ts',
+    '!<rootDir>/src/app/**/*cell-renderer.component.ts',
     '!<rootDir>/node_modules/',
     '!**/*.d.ts'
   ],
   coveragePathIgnorePatterns: ['<rootDir>/node_modules'],
-  coverageReporters: ['json', 'lcov', 'text-summary'],
+  coverageReporters: ['json', 'lcov', 'text'],
   coverageThreshold: {
     global: {
       lines: 90
@@ -25,5 +29,9 @@ module.exports = {
         ignoreCodes: [151001]
       }
     }
+  },
+  moduleNameMapper: {
+    '@shared/(.*)': '<rootDir>/src/app/shared/$1',
+    '@modules/(.*)': '<rootDir>/src/app/modules/$1'
   }
 };

@@ -1,24 +1,23 @@
 import { MatTabsModule } from '@angular/material/tabs';
+import { FileDetailsComponent } from '@modules/files/file-details/file-details.component';
+import { FilesQuery } from '@modules/files/state/files.query';
+import { SnapshotChartsComponent } from '@modules/snapshots/snapshot-charts/snapshot-charts.component';
+import { SnapshotStatisticsComponent } from '@modules/snapshots/snapshot-statistics/snapshot-statistics.component';
 import { createRoutingFactory, mockProvider, SpectatorRouting } from '@ngneat/spectator/jest';
+import { SnapshotViewComponent } from '@shared/components/snapshot-details/snapshot-view.component';
 import { MockComponent } from 'ng-mocks';
 import { of } from 'rxjs';
 
-import { SelectionService } from '../../services/selection.service';
-import { FileDetailsComponent } from '../file-details/file-details.component';
-import { SnapshotStatisticsComponent } from '../snapshot-statistics/snapshot-statistics.component';
-
-import { SnapshotDetailsComponent } from './snapshot-details.component';
-
-describe('SnapshotDetailsComponent', () => {
-  let spectator: SpectatorRouting<SnapshotDetailsComponent>;
+describe('SnapshotViewComponent', () => {
+  let spectator: SpectatorRouting<SnapshotViewComponent>;
   const createComponent = createRoutingFactory({
-    component: SnapshotDetailsComponent,
+    component: SnapshotViewComponent,
     providers: [
-      mockProvider(SelectionService, {
-        selectedFileId: of('1')
+      mockProvider(FilesQuery, {
+        selectActiveId: () => of('1')
       })
     ],
-    declarations: [MockComponent(SnapshotStatisticsComponent), MockComponent(FileDetailsComponent)],
+    declarations: [MockComponent(SnapshotStatisticsComponent), MockComponent(FileDetailsComponent), MockComponent(SnapshotChartsComponent)],
     imports: [MatTabsModule],
     params: { id: '4' }
   });
@@ -34,6 +33,6 @@ describe('SnapshotDetailsComponent', () => {
   it('should switch tabs if file selection changed', () => {
     spectator.component.ngOnInit();
 
-    expect(spectator.component.selectedIndex).toBe(2);
+    expect(spectator.component.selectedIndex).toBe(1);
   });
 });

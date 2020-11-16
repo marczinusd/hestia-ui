@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
+import { applyTransaction, withTransaction } from '@datorama/akita';
 import { FilesQuery } from '@modules/files/state/files.query';
 import { API_BASE_URL } from '@shared/config/tokens';
 import { File } from '@shared/model/file';
-import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 import { FilesStore } from './files.store';
 
@@ -17,13 +18,24 @@ export class FilesService {
       return of();
     }
 
+    this.store.setLoading(true);
+
     return this.http.get<File>(`${this.baseUrl}/files/${id}`).pipe(
-      tap((file) => {
-        this.store.update(file.id, (state) => ({
+      withTransaction((file) => {
+        this.store.upsert(file.id, (state) => ({
           lines: file.lines,
           filename: file.path.split('\\').pop().split('/').pop(),
           ...state
         }));
+        this.store.setLoading(false);
+      }),
+      catchError((error) => {
+        applyTransaction(() => {
+          this.store.setLoading(false);
+          this.store.setError(error);
+        });
+
+        return throwError(error);
       })
     );
   }
@@ -33,14 +45,25 @@ export class FilesService {
       return this.query.selectAll();
     }
 
+    this.store.setLoading(true);
+
     return this.http.get<File[]>(`${this.baseUrl}/snapshots/${snapshotId}/files`).pipe(
-      tap((files) => {
+      withTransaction((files) => {
         this.store.upsertMany(
           files.map((f) => ({
             filename: f.path.split('\\').pop().split('/').pop(),
             ...f
           }))
         );
+        this.store.setLoading(false);
+      }),
+      catchError((error) => {
+        applyTransaction(() => {
+          this.store.setLoading(false);
+          this.store.setError(error);
+        });
+
+        return throwError(error);
       })
     );
   }

@@ -24,7 +24,7 @@ export class AuthorGroupsChartComponent implements OnInit {
     }
   ];
   public lineChartLegend = true;
-  public lineChartType: ChartType = 'line';
+  public lineChartType: ChartType = 'bar';
   public lineChartPlugins = [];
   lineChartOptions: ChartOptions = {};
 
@@ -40,7 +40,7 @@ export class AuthorGroupsChartComponent implements OnInit {
           .filter((f) => f !== undefined && f.snapshotId === id)
           .groupBy('lifetimeAuthors')
           .map((group, key) => ({ key, length: group.length }))
-          .orderBy('length', 'desc')
+          .orderBy('length', 'asc')
           .value();
 
         this.lineChartLabels = authorGroups.map((g) => g.key);

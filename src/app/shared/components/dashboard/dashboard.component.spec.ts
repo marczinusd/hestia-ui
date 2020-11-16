@@ -1,12 +1,12 @@
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Router } from '@angular/router';
+import { SnapshotsService } from '@modules/snapshots/state/snapshots.service';
 import { byText, createRoutingFactory, mockProvider, Spectator } from '@ngneat/spectator/jest';
 import { of, throwError } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 
 import { Snapshot } from '../../model/snapshot';
-import { SnapshotsService } from '../../services/snapshots.service';
 
 import { DashboardComponent } from './dashboard.component';
 
@@ -39,7 +39,7 @@ describe('DashboardComponent', () => {
   });
 
   it('should render one snapshot header card', () => {
-    const service = spectator.inject<SnapshotsService>(SnapshotsService);
+    const service = spectator.inject(SnapshotsService);
     jest.spyOn(service, 'getAllHeaders').mockReturnValue(of([snapshot]));
 
     spectator.component.ngOnInit();
@@ -61,7 +61,7 @@ describe('DashboardComponent', () => {
   });
 
   it('should show progress spinner while snapshots are loading', () => {
-    const service = spectator.inject<SnapshotsService>(SnapshotsService);
+    const service = spectator.inject(SnapshotsService);
     const testScheduler = new TestScheduler(jestExpect);
 
     testScheduler.run(({ cold }) => {
@@ -73,7 +73,7 @@ describe('DashboardComponent', () => {
   });
 
   it('should hide progress spinner once loading is finished', () => {
-    const service = spectator.inject<SnapshotsService>(SnapshotsService);
+    const service = spectator.inject(SnapshotsService);
     const testScheduler = new TestScheduler(jestExpect);
 
     testScheduler.run(({ cold }) => {
@@ -87,7 +87,7 @@ describe('DashboardComponent', () => {
   });
 
   it('should show error message if snapshots could not be loaded', () => {
-    const service = spectator.inject<SnapshotsService>(SnapshotsService);
+    const service = spectator.inject(SnapshotsService);
     jest.spyOn(service, 'getAllHeaders').mockReturnValue(throwError('Oh no!'));
 
     spectator.click(spectator.query('.refresh-button'));
@@ -96,7 +96,7 @@ describe('DashboardComponent', () => {
   });
 
   it('should redirect to correct route when open button is clicked on a snapshot', () => {
-    const service = spectator.inject<SnapshotsService>(SnapshotsService);
+    const service = spectator.inject(SnapshotsService);
     jest.spyOn(service, 'getAllHeaders').mockReturnValue(of([snapshot]));
     const navigate = jest.spyOn(spectator.inject(Router), 'navigate');
     navigate.mockReturnValue(Promise.resolve(true));
@@ -110,7 +110,7 @@ describe('DashboardComponent', () => {
   });
 
   it('should hide loading errors if the popups hide button is pressed', () => {
-    const service = spectator.inject<SnapshotsService>(SnapshotsService);
+    const service = spectator.inject(SnapshotsService);
     jest.spyOn(service, 'getAllHeaders').mockReturnValue(throwError('Oh no!'));
     spectator.click(spectator.query('.refresh-button'));
 
