@@ -198,6 +198,7 @@ Thumbs.db
 
 cypress/screenshots/
 cypress/videos/
+debug.log
 
 .eslintcache
 

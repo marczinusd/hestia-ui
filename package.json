@@ -11,6 +11,7 @@
     "lint": "ng lint && eslint . --ext .ts,.json --ignore-pattern node_modules/",
     "lint:fix": "tslint --fix -c tslint.json --project tsconfig.json && eslint . --ext .ts,.json --ignore-pattern node_modules/ --fix",
     "e2e": "cypress open",
+    "e2e:start": "start-server-and-test start http-get://localhost:4200 e2e",
     "e2e:cover": "cypress open --env coverage=true",
     "e2e:ci": "start-server-and-test start http-get://localhost:4200 cy:run",
     "e2e:ci:cover": "start-server-and-test start http-get://localhost:4200 cy:run:cover",
