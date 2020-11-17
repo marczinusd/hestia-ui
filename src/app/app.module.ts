@@ -27,7 +27,7 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     SharedModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
-    AkitaNgRouterStoreModule.forRoot()
+    AkitaNgRouterStoreModule
   ],
   providers: [{ provide: API_BASE_URL, useFactory: () => environment.apiRoot }],
   bootstrap: [AppComponent]
