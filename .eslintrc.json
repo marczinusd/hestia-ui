@@ -47,7 +47,7 @@
         "jest/expect-expect": [
           "error",
           {
-            "assertFunctionNames": ["expect", "expectObservable"]
+            "assertFunctionNames": ["expect", "expectObservable", "should", "cy.get"]
           }
         ]
       },

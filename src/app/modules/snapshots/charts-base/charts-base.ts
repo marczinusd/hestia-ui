@@ -14,4 +14,16 @@ export class ChartsBase {
   public lineChartType: ChartType = 'bar';
   public lineChartPlugins = [];
   public lineChartOptions: ChartOptions = {};
+
+  protected hideXAxis(): void {
+    this.lineChartOptions = {
+      scales: {
+        xAxes: [
+          {
+            display: false
+          }
+        ]
+      }
+    };
+  }
 }

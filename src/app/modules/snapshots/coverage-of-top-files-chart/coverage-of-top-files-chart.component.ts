@@ -1,7 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import * as _ from 'lodash';
-import { Color, Label } from 'ng2-charts';
 import { combineLatest } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
@@ -19,15 +17,7 @@ export class CoverageOfTopFilesChartComponent extends ChartsBase implements OnIn
 
   constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {
     super();
-    this.lineChartOptions = {
-      scales: {
-        xAxes: [
-          {
-            display: false
-          }
-        ]
-      }
-    };
+    this.hideXAxis();
   }
 
   ngOnInit(): void {
