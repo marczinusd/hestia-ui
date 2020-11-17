@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { createRoutingFactory, Spectator } from '@ngneat/spectator/jest';
 import { AgGridModule } from 'ag-grid-angular';
-import { RowDoubleClickedEvent } from 'ag-grid-community';
+import { ColumnApi, GridApi, RowDoubleClickedEvent } from 'ag-grid-community';
 import { of } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 
@@ -44,6 +44,15 @@ describe('SnapshotStatisticsComponent', () => {
     const query = spectator.inject(SnapshotsQuery);
     query.activeId$ = of('1');
     filesService.getAllFilesForSnapshot.andReturn(of([mockFile]));
+    spectator.component.gridReady({
+      columnApi: {
+        autoSizeAllColumns: () => {}
+      } as ColumnApi,
+      api: {
+        sizeColumnsToFit: () => {}
+      } as GridApi,
+      type: ''
+    });
     spectator.detectChanges();
 
     spectator.component.openFileDetails({ ...event, data: { id: '42' } });

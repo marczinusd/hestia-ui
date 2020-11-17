@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { applyTransaction, withTransaction } from '@datorama/akita';
-import { Observable, of, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { FilesStore } from './files.store';
@@ -15,10 +15,6 @@ export class FilesService {
   constructor(private http: HttpClient, private store: FilesStore, private query: FilesQuery, @Inject(API_BASE_URL) private baseUrl?: string) {}
 
   public getFileDetails(id: string): Observable<File> {
-    if (id === undefined) {
-      return of();
-    }
-
     this.store.setLoading(true);
 
     return this.http.get<File>(`${this.baseUrl}/files/${id}`).pipe(
@@ -42,10 +38,6 @@ export class FilesService {
   }
 
   public getAllFilesForSnapshot(snapshotId: string): Observable<File[]> {
-    if (this.query.getAll().find((f) => f.snapshotId === snapshotId) !== undefined) {
-      return this.query.selectAll();
-    }
-
     this.store.setLoading(true);
 
     return this.http.get<File[]>(`${this.baseUrl}/snapshots/${snapshotId}/files`).pipe(

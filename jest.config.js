@@ -12,6 +12,7 @@ module.exports = {
     '!<rootDir>/src/app/**/*interceptor.ts',
     '!<rootDir>/src/app/**/*cell-renderer.component.ts',
     '!<rootDir>/node_modules/',
+    '!<rootDir>/src/app/modules/snapshots/charts-base/charts-base.ts',
     '!**/*.d.ts'
   ],
   coveragePathIgnorePatterns: ['<rootDir>/node_modules'],
