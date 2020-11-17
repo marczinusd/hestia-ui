@@ -6,6 +6,7 @@ import { combineLatest } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { FilesQuery } from '@modules/files/state/files.query';
+import { ChartsBase } from '@modules/snapshots/charts-base/charts-base';
 import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
 
 @Component({
@@ -13,29 +14,19 @@ import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
   templateUrl: './snapshot-stats-line-chart.component.html',
   styleUrls: ['./snapshot-stats-line-chart.component.scss']
 })
-export class SnapshotStatsLineChartComponent implements OnInit {
-  public lineChartData: ChartDataSets[] = [];
-  public lineChartLabels: Label[] = [];
-  public lineChartColors: Color[] = [
-    {
-      borderColor: 'black',
-      backgroundColor: 'rgba(255,0,0,0.3)'
-    }
-  ];
-  public lineChartLegend = true;
-  public lineChartType: ChartType = 'line';
-  public lineChartPlugins = [];
-  public lineChartOptions: ChartOptions = {
-    scales: {
-      xAxes: [
-        {
-          display: false
-        }
-      ]
-    }
-  };
-
-  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
+export class SnapshotStatsLineChartComponent extends ChartsBase implements OnInit {
+  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {
+    super();
+    this.lineChartOptions = {
+      scales: {
+        xAxes: [
+          {
+            display: false
+          }
+        ]
+      }
+    };
+  }
 
   ngOnInit(): void {
     combineLatest([this.snapshotsQuery.activeId$, this.filesQuery.selectAll()])

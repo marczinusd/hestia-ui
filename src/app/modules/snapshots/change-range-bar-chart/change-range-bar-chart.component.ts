@@ -6,6 +6,7 @@ import { combineLatest } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { FilesQuery } from '@modules/files/state/files.query';
+import { ChartsBase } from '@modules/snapshots/charts-base/charts-base';
 import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
 import { File } from '@shared/model/file';
 
@@ -14,22 +15,12 @@ import { File } from '@shared/model/file';
   templateUrl: './change-range-bar-chart.component.html',
   styleUrls: ['./change-range-bar-chart.component.scss']
 })
-export class ChangeRangeBarChartComponent implements OnInit {
+export class ChangeRangeBarChartComponent extends ChartsBase implements OnInit {
   @Input() public barStepGranularity = 10;
-  public lineChartData: ChartDataSets[] = [];
-  public lineChartLabels: Label[] = [];
-  public lineChartColors: Color[] = [
-    {
-      borderColor: 'black',
-      backgroundColor: 'rgba(255,0,0,0.3)'
-    }
-  ];
-  public lineChartLegend = true;
-  public lineChartType: ChartType = 'bar';
-  public lineChartPlugins = [];
-  public lineChartOptions: ChartOptions = {};
 
-  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
+  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {
+    super();
+  }
 
   ngOnInit(): void {
     combineLatest([this.snapshotsQuery.activeId$, this.filesQuery.selectAll()])

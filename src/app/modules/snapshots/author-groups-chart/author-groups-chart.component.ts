@@ -6,6 +6,7 @@ import { combineLatest } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { FilesQuery } from '@modules/files/state/files.query';
+import { ChartsBase } from '@modules/snapshots/charts-base/charts-base';
 import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
 
 @Component({
@@ -13,21 +14,10 @@ import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
   templateUrl: './author-groups-chart.component.html',
   styleUrls: ['./author-groups-chart.component.scss']
 })
-export class AuthorGroupsChartComponent implements OnInit {
-  public lineChartData: ChartDataSets[] = [];
-  public lineChartLabels: Label[] = [];
-  public lineChartColors: Color[] = [
-    {
-      borderColor: 'black',
-      backgroundColor: 'rgba(255,0,0,0.3)'
-    }
-  ];
-  public lineChartLegend = true;
-  public lineChartType: ChartType = 'bar';
-  public lineChartPlugins = [];
-  public lineChartOptions: ChartOptions = {};
-
-  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
+export class AuthorGroupsChartComponent extends ChartsBase implements OnInit {
+  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {
+    super();
+  }
 
   ngOnInit(): void {
     combineLatest([this.snapshotsQuery.activeId$, this.filesQuery.selectAll()])
