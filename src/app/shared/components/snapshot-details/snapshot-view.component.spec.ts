@@ -1,12 +1,13 @@
 import { MatTabsModule } from '@angular/material/tabs';
+import { createRoutingFactory, mockProvider, SpectatorRouting } from '@ngneat/spectator/jest';
+import { MockComponent } from 'ng-mocks';
+import { of } from 'rxjs';
+
 import { FileDetailsComponent } from '@modules/files/file-details/file-details.component';
 import { FilesQuery } from '@modules/files/state/files.query';
 import { SnapshotChartsComponent } from '@modules/snapshots/snapshot-charts/snapshot-charts.component';
 import { SnapshotStatisticsComponent } from '@modules/snapshots/snapshot-statistics/snapshot-statistics.component';
-import { createRoutingFactory, mockProvider, SpectatorRouting } from '@ngneat/spectator/jest';
 import { SnapshotViewComponent } from '@shared/components/snapshot-details/snapshot-view.component';
-import { MockComponent } from 'ng-mocks';
-import { of } from 'rxjs';
 
 describe('SnapshotViewComponent', () => {
   let spectator: SpectatorRouting<SnapshotViewComponent>;

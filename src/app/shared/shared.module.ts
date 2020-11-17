@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { FilesModule } from '@modules/files/files.module';
 import { SnapshotsModule } from '@modules/snapshots/snapshots.module';
 import { ButtonCellRendererComponent } from '@shared/components/button-cell-renderer/button-cell-renderer.component';

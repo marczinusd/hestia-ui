@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { applyTransaction, withTransaction } from '@datorama/akita';
-import { API_BASE_URL } from '@shared/config/tokens';
-import { Snapshot } from '@shared/model/snapshot';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { SnapshotsStore } from './snapshots.store';
+
+import { API_BASE_URL } from '@shared/config/tokens';
+import { Snapshot } from '@shared/model/snapshot';
 
 @Injectable({ providedIn: 'root' })
 export class SnapshotsService {

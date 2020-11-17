@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FilesQuery } from '@modules/files/state/files.query';
-import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import * as _ from 'lodash';
 import { Color, Label } from 'ng2-charts';
 import { combineLatest } from 'rxjs';
 import { filter } from 'rxjs/operators';
+
+import { FilesQuery } from '@modules/files/state/files.query';
+import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
 
 @Component({
   selector: 'app-snapshot-stats-line-chart',

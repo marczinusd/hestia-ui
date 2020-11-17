@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { applyTransaction, withTransaction } from '@datorama/akita';
-import { FilesQuery } from '@modules/files/state/files.query';
-import { API_BASE_URL } from '@shared/config/tokens';
-import { File } from '@shared/model/file';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { FilesStore } from './files.store';
+
+import { FilesQuery } from '@modules/files/state/files.query';
+import { API_BASE_URL } from '@shared/config/tokens';
+import { File } from '@shared/model/file';
 
 @Injectable({ providedIn: 'root' })
 export class FilesService {

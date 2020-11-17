@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { EntityState, EntityStore, StoreConfig } from '@datorama/akita';
+
 import { Snapshot } from '@shared/model/snapshot';
 
 export type SnapshotsState = EntityState<Snapshot>;

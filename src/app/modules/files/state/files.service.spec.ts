@@ -1,12 +1,14 @@
+/* eslint-disable @typescript-eslint/unbound-method */
 import { HttpClient } from '@angular/common/http';
-import { FilesQuery } from '@modules/files/state/files.query';
-import { FilesService } from '@modules/files/state/files.service';
 import { SpectatorService } from '@ngneat/spectator';
 import { createHttpFactory } from '@ngneat/spectator/jest';
-import { API_BASE_URL } from '@shared/config/tokens';
-import { File } from '@shared/model/file';
 import { of } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
+
+import { FilesQuery } from '@modules/files/state/files.query';
+import { FilesService } from '@modules/files/state/files.service';
+import { API_BASE_URL } from '@shared/config/tokens';
+import { File } from '@shared/model/file';
 
 describe('FilesService', () => {
   let spectator: SpectatorService<FilesService>;

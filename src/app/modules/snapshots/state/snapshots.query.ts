@@ -7,7 +7,7 @@ import { SnapshotsState, SnapshotsStore } from './snapshots.store';
 
 @Injectable({ providedIn: 'root' })
 export class SnapshotsQuery extends QueryEntity<SnapshotsState> {
-  activeId$: Observable<string> = this.selectActiveId().pipe(filter((id) => id !== undefined));
+  activeId$: Observable<string> = this.selectActiveId().pipe(filter((id) => id !== undefined)) as Observable<string>;
 
   constructor(protected store: SnapshotsStore) {
     super(store);

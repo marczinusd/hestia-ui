@@ -1,14 +1,16 @@
+/* eslint-disable @typescript-eslint/unbound-method */
 import { HttpClient } from '@angular/common/http';
-import { FilesService } from '@modules/files/state/files.service';
-import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
 import { createRoutingFactory, Spectator } from '@ngneat/spectator/jest';
-import { mockFile } from '@shared/mocks/file.mock';
 import { AgGridModule } from 'ag-grid-angular';
 import { RowDoubleClickedEvent } from 'ag-grid-community';
 import { of } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 
 import { SnapshotStatisticsComponent } from './snapshot-statistics.component';
+
+import { FilesService } from '@modules/files/state/files.service';
+import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
+import { mockFile } from '@shared/mocks/file.mock';
 
 describe('SnapshotStatisticsComponent', () => {
   let spectator: Spectator<SnapshotStatisticsComponent>;

@@ -1,13 +1,15 @@
+/* eslint-disable @typescript-eslint/unbound-method */
 import { HttpClient } from '@angular/common/http';
-import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
-import { SnapshotsService } from '@modules/snapshots/state/snapshots.service';
 import { SpectatorService } from '@ngneat/spectator';
 import { createHttpFactory } from '@ngneat/spectator/jest';
+import { of } from 'rxjs';
+import { TestScheduler } from 'rxjs/testing';
+
+import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
+import { SnapshotsService } from '@modules/snapshots/state/snapshots.service';
 import { API_BASE_URL } from '@shared/config/tokens';
 import { File } from '@shared/model/file';
 import { Snapshot } from '@shared/model/snapshot';
-import { of } from 'rxjs';
-import { TestScheduler } from 'rxjs/testing';
 
 describe('SnapshotsService', () => {
   let spectator: SpectatorService<SnapshotsService>;

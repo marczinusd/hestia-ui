@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ColDef, ColumnApi, GridApi, GridOptions, GridReadyEvent, RowDoubleClickedEvent } from 'ag-grid-community';
+import { Subscription } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+
 import { FilesService } from '@modules/files/state/files.service';
 import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
 import { ButtonCellRendererComponent } from '@shared/components/button-cell-renderer/button-cell-renderer.component';
 import { File } from '@shared/model/file';
-import { ColDef, ColumnApi, GridApi, GridOptions, GridReadyEvent, RowDoubleClickedEvent } from 'ag-grid-community';
-import { Subscription } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-snapshot-statistics',

@@ -5,15 +5,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
-import { FilesModule } from '@modules/files/files.module';
-import { SnapshotsModule } from '@modules/snapshots/snapshots.module';
-import { API_BASE_URL } from '@shared/config/tokens';
-import { SharedModule } from '@shared/shared.module';
 
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { FilesModule } from '@modules/files/files.module';
+import { SnapshotsModule } from '@modules/snapshots/snapshots.module';
+import { API_BASE_URL } from '@shared/config/tokens';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],

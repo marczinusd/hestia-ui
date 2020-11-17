@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { SnapshotsService } from '@modules/snapshots/state/snapshots.service';
 import { Snapshot } from '@shared/model/snapshot';
 
@@ -33,9 +34,9 @@ export class DashboardComponent implements OnInit {
     );
   }
 
-  openSnapshot(id: string): void {
+  async openSnapshot(id: string): Promise<void> {
     this.service.selectActive(id);
-    this.router.navigate(['snapshots', id]);
+    await this.router.navigate(['snapshots', id]);
   }
 
   hideError(): void {

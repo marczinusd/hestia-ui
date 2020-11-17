@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FilesQuery } from '@modules/files/state/files.query';
 
 @Component({

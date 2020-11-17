@@ -1,12 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FilesQuery } from '@modules/files/state/files.query';
-import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
-import { File } from '@shared/model/file';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import * as _ from 'lodash';
 import { Color, Label } from 'ng2-charts';
 import { combineLatest } from 'rxjs';
 import { filter } from 'rxjs/operators';
+
+import { FilesQuery } from '@modules/files/state/files.query';
+import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
+import { File } from '@shared/model/file';
 
 @Component({
   selector: 'app-change-range-bar-chart',
@@ -46,7 +47,7 @@ export class ChangeRangeBarChartComponent implements OnInit {
   }
 
   private setChartData(filesForCurrentId: File[]): void {
-    const labels = [];
+    const labels: Label[] = [];
     const values = [];
 
     const maxLifetimeChanges = _.maxBy(filesForCurrentId, 'lifetimeChanges')?.lifetimeChanges;

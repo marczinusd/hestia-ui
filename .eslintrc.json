@@ -1,5 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
+
   "extends": ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint", "plugin:prettier/recommended"],
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -14,15 +15,50 @@
      * -----------------------------------------------------
      */
     {
+      "extends": [
+        "plugin:@angular-eslint/ng-cli-compat",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "plugin:jest/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
       "files": ["*.ts"],
       "parserOptions": {
         "project": ["tsconfig.app.json", "tsconfig.spec.json", "cypress/tsconfig.json"],
         "createDefaultProgram": true
       },
-      "extends": ["plugin:@angular-eslint/ng-cli-compat", "plugin:@angular-eslint/template/process-inline-templates"],
       "rules": {
         "@angular-eslint/directive-selector": ["error", { "type": "attribute", "prefix": "app", "style": "camelCase" }],
-        "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": "app", "style": "kebab-case" }]
+        "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": "app", "style": "kebab-case" }],
+        "import/no-deprecated": 0,
+        "import/namespace": 0, // doesn't work with lodash...
+        "import/order": [
+          "error",
+          {
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            },
+            "newlines-between": "always"
+          }
+        ],
+        "jest/expect-expect": [
+          "error",
+          {
+            "assertFunctionNames": ["expect", "expectObservable"]
+          }
+        ]
+      },
+      "plugins": ["import"],
+      "settings": {
+        "import/parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+          "typescript": {}
+        }
       }
     },
     {

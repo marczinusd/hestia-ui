@@ -1,7 +1,6 @@
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Router } from '@angular/router';
-import { SnapshotsService } from '@modules/snapshots/state/snapshots.service';
 import { byText, createRoutingFactory, mockProvider, Spectator } from '@ngneat/spectator/jest';
 import { of, throwError } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
@@ -9,6 +8,8 @@ import { TestScheduler } from 'rxjs/testing';
 import { Snapshot } from '../../model/snapshot';
 
 import { DashboardComponent } from './dashboard.component';
+
+import { SnapshotsService } from '@modules/snapshots/state/snapshots.service';
 
 describe('DashboardComponent', () => {
   let spectator: Spectator<DashboardComponent>;

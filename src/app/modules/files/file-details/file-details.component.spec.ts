@@ -1,16 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { FilesService } from '@modules/files/state/files.service';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
-import { API_BASE_URL } from '@shared/config/tokens';
-import { mockFile } from '@shared/mocks/file.mock';
-import { File } from '@shared/model/file';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { throwError } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 
 import { FileDetailsComponent } from './file-details.component';
+
+import { FilesService } from '@modules/files/state/files.service';
+import { API_BASE_URL } from '@shared/config/tokens';
+import { mockFile } from '@shared/mocks/file.mock';
+import { File } from '@shared/model/file';
 
 describe('FileDetailsComponent', () => {
   let spectator: Spectator<FileDetailsComponent>;

@@ -12,6 +12,7 @@ import { Snapshot } from '../model/snapshot';
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const ok = (messageBody?): Observable<HttpEvent<any>> => of(new HttpResponse({ status: 200, body: messageBody }));
     const getFileDetails = (): Observable<HttpEvent<any>> => ok(files);
     const getAllSnapshots = (): Observable<HttpEvent<any>> => ok(snapshots);

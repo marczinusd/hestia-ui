@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FilesQuery } from '@modules/files/state/files.query';
-import { FilesService } from '@modules/files/state/files.service';
-import { File } from '@shared/model/file';
 import * as _ from 'lodash';
 import { Observable, Subscription } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+
+import { FilesQuery } from '@modules/files/state/files.query';
+import { FilesService } from '@modules/files/state/files.service';
+import { File } from '@shared/model/file';
 
 @Component({
   selector: 'app-file-details',
@@ -68,12 +69,12 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
   private mapExtensionsToCommentSymbol(filePath: string): string {
     const ext = filePath.split('.').pop();
 
-    return this.extToCommentSymbolMap[ext];
+    return this.extToCommentSymbolMap[ext] as string;
   }
 
   private mapExtensionToMonacoLanguage(filePath: string): string {
     const ext = filePath.split('.').pop();
 
-    return this.extToLanguageMap[ext];
+    return this.extToLanguageMap[ext] as string;
   }
 }

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router) {}
 
-  navigateHome(): void {
-    this.router.navigate(['/']);
+  async navigateHome(): Promise<void> {
+    await this.router.navigate(['/']);
   }
 }
