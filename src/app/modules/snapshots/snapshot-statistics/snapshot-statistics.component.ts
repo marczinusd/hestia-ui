@@ -13,8 +13,6 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./snapshot-statistics.component.scss']
 })
 export class SnapshotStatisticsComponent implements OnInit, OnDestroy {
-  constructor(private filesService: FilesService, private snapshotsQuery: SnapshotsQuery) {}
-
   public columnDefs: (ColDef | { field: keyof File })[] = [
     {
       field: 'filename'
@@ -54,13 +52,13 @@ export class SnapshotStatisticsComponent implements OnInit, OnDestroy {
   };
 
   public frameworkComponents;
-
-  options: GridOptions = {};
-  gridApi: GridApi;
-  columnApi: ColumnApi;
-
+  public options: GridOptions = {};
+  public gridApi: GridApi;
+  public columnApi: ColumnApi;
   public rowData: File[] = [];
   private selectedSnapshotSubscription: Subscription;
+
+  constructor(private filesService: FilesService, private snapshotsQuery: SnapshotsQuery) {}
 
   openFileDetails = (event: RowDoubleClickedEvent): void => this.filesService.selectActive((event.data as File).id);
 

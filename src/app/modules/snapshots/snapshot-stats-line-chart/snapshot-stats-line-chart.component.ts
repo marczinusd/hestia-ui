@@ -13,8 +13,6 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./snapshot-stats-line-chart.component.scss']
 })
 export class SnapshotStatsLineChartComponent implements OnInit {
-  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
-
   public lineChartData: ChartDataSets[] = [];
   public lineChartLabels: Label[] = [];
   public lineChartColors: Color[] = [
@@ -26,7 +24,7 @@ export class SnapshotStatsLineChartComponent implements OnInit {
   public lineChartLegend = true;
   public lineChartType: ChartType = 'line';
   public lineChartPlugins = [];
-  lineChartOptions: ChartOptions = {
+  public lineChartOptions: ChartOptions = {
     scales: {
       xAxes: [
         {
@@ -35,6 +33,8 @@ export class SnapshotStatsLineChartComponent implements OnInit {
       ]
     }
   };
+
+  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
 
   ngOnInit(): void {
     combineLatest([this.snapshotsQuery.activeId$, this.filesQuery.selectAll()])

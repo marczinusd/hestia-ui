@@ -14,10 +14,7 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./change-range-bar-chart.component.scss']
 })
 export class ChangeRangeBarChartComponent implements OnInit {
-  @Input() barStepGranularity = 10;
-
-  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
-
+  @Input() public barStepGranularity = 10;
   public lineChartData: ChartDataSets[] = [];
   public lineChartLabels: Label[] = [];
   public lineChartColors: Color[] = [
@@ -29,7 +26,9 @@ export class ChangeRangeBarChartComponent implements OnInit {
   public lineChartLegend = true;
   public lineChartType: ChartType = 'bar';
   public lineChartPlugins = [];
-  lineChartOptions: ChartOptions = {};
+  public lineChartOptions: ChartOptions = {};
+
+  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
 
   ngOnInit(): void {
     combineLatest([this.snapshotsQuery.activeId$, this.filesQuery.selectAll()])

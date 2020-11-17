@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FilesQuery } from '@modules/files/state/files.query';
 import { FilesService } from '@modules/files/state/files.service';
 import { File } from '@shared/model/file';
-import { Line } from '@shared/model/line';
 import * as _ from 'lodash';
 import { Observable, Subscription } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
@@ -13,39 +12,27 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./file-details.component.scss']
 })
 export class FileDetailsComponent implements OnInit, OnDestroy {
-  constructor(private filesQuery: FilesQuery, private filesService: FilesService) {}
-
   public file: File;
   public code: string;
   public loading: boolean;
   public isLoading$: Observable<boolean>;
   public error$: Observable<string>;
   public editorOptions = { theme: 'vs-dark', language: 'javascript', readOnly: true, automaticLayout: true };
-  private selectedFileSubscription: Subscription;
-
-  extToLanguageMap = {
+  public extToLanguageMap = {
     ts: 'typescript',
     js: 'javascript',
     cs: 'csharp'
   };
 
-  extToCommentSymbolMap = {
+  public extToCommentSymbolMap = {
     ts: '//',
     js: '//',
     cs: '//'
   };
-  showError: boolean;
+  public showError: boolean;
+  private selectedFileSubscription: Subscription;
 
-  private static lineSort(first: Line, second: Line): number {
-    if (first.lineNumber < second.lineNumber) {
-      return -1;
-    }
-    if (first.lineNumber > second.lineNumber) {
-      return 1;
-    }
-
-    return 0;
-  }
+  constructor(private filesQuery: FilesQuery, private filesService: FilesService) {}
 
   public ngOnDestroy(): void {
     this.selectedFileSubscription?.unsubscribe();

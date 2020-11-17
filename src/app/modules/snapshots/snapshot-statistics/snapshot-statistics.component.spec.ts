@@ -1,12 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { FilesQuery } from '@modules/files/state/files.query';
 import { FilesService } from '@modules/files/state/files.service';
 import { SnapshotsQuery } from '@modules/snapshots/state/snapshots.query';
 import { createRoutingFactory, Spectator } from '@ngneat/spectator/jest';
 import { mockFile } from '@shared/mocks/file.mock';
 import { AgGridModule } from 'ag-grid-angular';
 import { RowDoubleClickedEvent } from 'ag-grid-community';
-import { MockComponent } from 'ng-mocks';
 import { of } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 

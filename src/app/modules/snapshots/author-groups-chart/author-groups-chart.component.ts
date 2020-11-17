@@ -13,8 +13,6 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./author-groups-chart.component.scss']
 })
 export class AuthorGroupsChartComponent implements OnInit {
-  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
-
   public lineChartData: ChartDataSets[] = [];
   public lineChartLabels: Label[] = [];
   public lineChartColors: Color[] = [
@@ -26,7 +24,9 @@ export class AuthorGroupsChartComponent implements OnInit {
   public lineChartLegend = true;
   public lineChartType: ChartType = 'bar';
   public lineChartPlugins = [];
-  lineChartOptions: ChartOptions = {};
+  public lineChartOptions: ChartOptions = {};
+
+  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
 
   ngOnInit(): void {
     combineLatest([this.snapshotsQuery.activeId$, this.filesQuery.selectAll()])

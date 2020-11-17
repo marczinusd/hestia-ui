@@ -14,9 +14,6 @@ import { filter } from 'rxjs/operators';
 })
 export class CoverageOfTopFilesChartComponent implements OnInit {
   @Input() numberOfFiles = 25;
-
-  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
-
   public lineChartData: ChartDataSets[] = [];
   public lineChartLabels: Label[] = [];
   public lineChartColors: Color[] = [
@@ -28,7 +25,7 @@ export class CoverageOfTopFilesChartComponent implements OnInit {
   public lineChartLegend = true;
   public lineChartType: ChartType = 'bar';
   public lineChartPlugins = [];
-  lineChartOptions: ChartOptions = {
+  public lineChartOptions: ChartOptions = {
     scales: {
       xAxes: [
         {
@@ -37,6 +34,8 @@ export class CoverageOfTopFilesChartComponent implements OnInit {
       ]
     }
   };
+
+  constructor(private snapshotsQuery: SnapshotsQuery, private filesQuery: FilesQuery) {}
 
   ngOnInit(): void {
     combineLatest([this.snapshotsQuery.activeId$, this.filesQuery.selectAll()])

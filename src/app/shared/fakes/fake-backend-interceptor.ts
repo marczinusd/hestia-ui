@@ -12,6 +12,27 @@ import { Snapshot } from '../model/snapshot';
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    const ok = (messageBody?): Observable<HttpEvent<any>> => of(new HttpResponse({ status: 200, body: messageBody }));
+    const getFileDetails = (): Observable<HttpEvent<any>> => ok(files);
+    const getAllSnapshots = (): Observable<HttpEvent<any>> => ok(snapshots);
+    const handleRoute = (): Observable<HttpEvent<any>> => {
+      switch (true) {
+        case url.endsWith('/snapshots') && method === 'GET':
+          console.log('invoked /snapshots on interceptor');
+          return getAllSnapshots();
+        case url.endsWith('/files') && method === 'GET':
+          console.log('invoked /files/ on interceptor');
+          return getFileDetails();
+        case url.includes('/files/'):
+          const id = url.split('/files/')[1];
+          console.log(`invoked /files/${id} on interceptor`);
+          return ok(files.find((f) => f.id === id));
+        default:
+          // pass through any requests not handled above
+          return next.handle(request);
+      }
+    };
+
     const { url, method } = request;
     const lines: Line[] = [
       {
@@ -57,36 +78,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
     ];
 
     return of(null).pipe(mergeMap(handleRoute)).pipe(delay(500)).pipe(materialize()).pipe(dematerialize());
-
-    function handleRoute(): Observable<HttpEvent<any>> {
-      switch (true) {
-        case url.endsWith('/snapshots') && method === 'GET':
-          console.log('invoked /snapshots on interceptor');
-          return getAllSnapshots();
-        case url.endsWith('/files') && method === 'GET':
-          console.log('invoked /files/ on interceptor');
-          return getFileDetails();
-        case url.includes('/files/'):
-          const id = url.split('/files/')[1];
-          console.log(`invoked /files/${id} on interceptor`);
-          return ok(files.find((f) => f.id === id));
-        default:
-          // pass through any requests not handled above
-          return next.handle(request);
-      }
-    }
-
-    function getFileDetails(): Observable<HttpEvent<any>> {
-      return ok(files);
-    }
-
-    function getAllSnapshots(): Observable<HttpEvent<any>> {
-      return ok(snapshots);
-    }
-
-    function ok(messageBody?): Observable<HttpEvent<any>> {
-      return of(new HttpResponse({ status: 200, body: messageBody }));
-    }
   }
 }
 
