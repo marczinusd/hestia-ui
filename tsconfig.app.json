@@ -6,5 +6,6 @@
     "types": []
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
-  "include": ["src/**/*.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts", "**/mocks/*.ts", "**/fakes/*.ts"],
+  "include": ["src/app/**/*.ts"]
 }
