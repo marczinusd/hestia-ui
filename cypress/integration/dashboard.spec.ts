@@ -1,14 +1,8 @@
+import { setupDefaultFixtures } from '../support/commands';
+
 describe('Dashboard', () => {
   beforeEach(() => {
-    cy.server();
-
-    cy.fixture('snapshots.json').as('snapshots');
-    cy.fixture('files.json').as('files');
-    cy.fixture('file-details.json').as('file-details');
-
-    cy.route('GET', '**/snapshots', '@snapshots');
-    cy.route('GET', '**/snapshots/*/files', '@files');
-    cy.route('GET', '**/files/*', '@file-details');
+    setupDefaultFixtures();
 
     cy.visit('/dashboard');
   });
@@ -24,7 +18,7 @@ describe('Dashboard', () => {
     cy.url().should('include', '/snapshots');
   });
 
-  it('clicking on main Hestia link navigates back to dashboard', () => {
+  it('shows Hestia link that navigates back to dashboard', () => {
     cy.get('.mat-button').first().click();
     cy.contains('Hestia').click();
 

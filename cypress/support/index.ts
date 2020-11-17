@@ -12,7 +12,7 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-
+// @ts-check
 import '@cypress/code-coverage/support';
 
 import './commands';

@@ -17,7 +17,7 @@
     "e2e:ci:cover": "start-server-and-test start http-get://localhost:4200 cy:run:cover",
     "e2e:ci:quiet": "start-server-and-test start http-get://localhost:4200 cy:run:quiet",
     "cy:run": "cypress run",
-    "cy:run:quiet": "cypress run -q",
+    "cy:run:quiet": "cypress run -q --reporter=list",
     "cy:run:cover": "cypress run --env coverage=true"
   },
   "private": true,
