@@ -94,7 +94,7 @@ describe('FileDetailsComponent', () => {
       service.selectActive('1');
       testScheduler.flush();
 
-      expect(spectator.component.code.split('\n')).toEqual(['hello    // HC: 0 DA: 2 CC: 3 ', 'world    // HC: 0 DA: 2 CC: 3 ']);
+      expect(spectator.component.code.split('\n')).toEqual(['hello    // HC: 0 DA: 2 CC: 3 BC: 100%', 'world    // HC: 0 DA: 2 CC: 3 ']);
     });
   });
 

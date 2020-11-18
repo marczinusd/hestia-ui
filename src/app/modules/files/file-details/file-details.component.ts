@@ -53,7 +53,7 @@ export class FileDetailsComponent implements OnInit, OnDestroy {
         .map((l) => {
           const tabs = ' '.repeat(maxLineWidth - l.content.length);
           return `${l.content}${tabs}${this.mapExtensionsToCommentSymbol(details.path)} HC: ${l.hitCount} DA: ${l.numberOfAuthors} CC: ${l.numberOfChanges} ${
-            l.isBranched ? l.conditionCoverage : ''
+            l.isBranched ? 'BC: ' + l.conditionCoverage : ''
           }`;
         })
         .value()
