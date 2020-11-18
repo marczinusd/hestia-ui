@@ -14,10 +14,8 @@ export class SnapshotViewComponent implements OnInit {
   constructor(private filesQuery: FilesQuery) {}
 
   ngOnInit(): void {
-    this.filesQuery.selectActiveId().subscribe((id) => {
-      if (id !== undefined) {
-        this.selectedIndex = 1;
-      }
+    this.filesQuery.activeId$.subscribe(() => {
+      this.selectedIndex = 1;
     });
   }
 }

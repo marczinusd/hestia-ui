@@ -15,7 +15,7 @@ describe('SnapshotViewComponent', () => {
     component: SnapshotViewComponent,
     providers: [
       mockProvider(FilesQuery, {
-        selectActiveId: () => of('1')
+        activeId$: of('1')
       })
     ],
     declarations: [MockComponent(SnapshotStatisticsComponent), MockComponent(FileDetailsComponent), MockComponent(SnapshotChartsComponent)],
