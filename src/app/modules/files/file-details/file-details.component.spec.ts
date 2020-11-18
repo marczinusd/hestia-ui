@@ -31,6 +31,12 @@ describe('FileDetailsComponent', () => {
     expect(spectator.component).toBeTruthy();
   });
 
+  it('should set showError flag to false when hideError is called', () => {
+    spectator.component.hideError();
+
+    expect(spectator.component.showError).toBeFalsy();
+  });
+
   it('should hide the loading spinner once loading finishes', () => {
     const service = spectator.inject(FilesService);
     const http = spectator.inject(HttpClient);

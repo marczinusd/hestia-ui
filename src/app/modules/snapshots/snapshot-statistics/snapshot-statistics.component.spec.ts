@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { createRoutingFactory, Spectator } from '@ngneat/spectator/jest';
 import { AgGridModule } from 'ag-grid-angular';
-import { ColumnApi, GridApi, RowDoubleClickedEvent } from 'ag-grid-community';
+import { ColDef, ColumnApi, GridApi, RowDoubleClickedEvent } from 'ag-grid-community';
 import { of } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 
@@ -58,6 +58,16 @@ describe('SnapshotStatisticsComponent', () => {
     spectator.component.openFileDetails({ ...event, data: { id: '42' } });
 
     expect(filesService.selectActive).toHaveBeenCalled();
+  });
+
+  it('should provide callback for cell renderer that invokes FilesService', () => {
+    const filesService = spectator.inject(FilesService);
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    const callback = (spectator.component.columnDefs[6] as ColDef)?.cellRendererParams?.clicked as ({ data: File }) => void;
+
+    callback({ data: mockFile });
+
+    expect(filesService.selectActive).toHaveBeenCalledWith(mockFile.id);
   });
 
   it('should set rowData correctly', () => {
