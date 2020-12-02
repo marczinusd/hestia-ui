@@ -20,7 +20,8 @@ describe('FilesService', () => {
     path: 'file.ts',
     lines: [],
     filename: '',
-    snapshotId: 'snapshotId'
+    snapshotId: 'snapshotId',
+    lineCount: 0
   };
   const createHttp = createHttpFactory({
     providers: [{ provide: API_BASE_URL, useFactory: () => 'url' }],

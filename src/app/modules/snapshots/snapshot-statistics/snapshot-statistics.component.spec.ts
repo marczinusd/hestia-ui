@@ -63,7 +63,7 @@ describe('SnapshotStatisticsComponent', () => {
   it('should provide callback for cell renderer that invokes FilesService', () => {
     const filesService = spectator.inject(FilesService);
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    const callback = (spectator.component.columnDefs[6] as ColDef)?.cellRendererParams?.clicked as ({ data: File }) => void;
+    const callback = (spectator.component.columnDefs[7] as ColDef)?.cellRendererParams?.clicked as ({ data: File }) => void;
 
     callback({ data: mockFile });
 

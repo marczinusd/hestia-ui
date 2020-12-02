@@ -28,11 +28,11 @@ export class AuthorGroupsChartComponent extends ChartsBase implements OnInit {
         const authorGroups = _.chain(files)
           .filter((f) => f !== undefined && f.snapshotId === id)
           .groupBy('lifetimeAuthors')
-          .map((group, key) => ({ key, length: group.length }))
-          .orderBy('length', 'asc')
+          .map((group, key) => ({ key: _.parseInt(key), length: group.length }))
+          .orderBy('key', 'asc')
           .value();
 
-        this.lineChartLabels = authorGroups.map((g) => g.key);
+        this.lineChartLabels = authorGroups.map((g) => g.key.toString());
         this.lineChartData = [{ data: authorGroups.map((g) => g.length), label: 'Number of files in group' }];
       });
   }

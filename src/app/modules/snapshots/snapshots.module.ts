@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AgGridModule } from 'ag-grid-angular';
 import { ChartsModule } from 'ng2-charts';
@@ -14,7 +17,7 @@ import { SnapshotChartsComponent } from '@modules/snapshots/snapshot-charts/snap
 import { SnapshotStatisticsComponent } from '@modules/snapshots/snapshot-statistics/snapshot-statistics.component';
 
 @NgModule({
-  imports: [CommonModule, MatTabsModule, AgGridModule.withComponents([]), ChartsModule, MatCardModule],
+  imports: [CommonModule, MatTabsModule, AgGridModule.withComponents([]), ChartsModule, MatCardModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule],
   exports: [SnapshotStatisticsComponent, SnapshotChartsComponent],
   declarations: [
     SnapshotChartsComponent,

@@ -9,4 +9,5 @@ export interface File {
   lifetimeAuthors: number;
   coveragePercentage: number;
   lines: Line[];
+  lineCount: number;
 }

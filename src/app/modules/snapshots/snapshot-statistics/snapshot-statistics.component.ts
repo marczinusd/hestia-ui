@@ -28,6 +28,9 @@ export class SnapshotStatisticsComponent implements OnInit, OnDestroy {
       field: 'lifetimeChanges'
     },
     {
+      field: 'lineCount'
+    },
+    {
       field: 'coveragePercentage'
     },
     {

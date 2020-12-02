@@ -21,7 +21,8 @@ describe('SnapshotsService', () => {
     path: 'file.ts',
     lines: [],
     filename: '',
-    snapshotId: 'snapshotId'
+    snapshotId: 'snapshotId',
+    lineCount: 0
   };
   const snapshot: Snapshot = {
     id: 'snapshotId',

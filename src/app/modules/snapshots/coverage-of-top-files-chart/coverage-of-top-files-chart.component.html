@@ -16,4 +16,12 @@
     >
     </canvas>
   </mat-card-content>
+  <mat-card-footer>
+    <mat-form-field class="count-spinner">
+      <label>
+        <mat-label>Chart data count</mat-label>
+        <input matInput type="number" [formControl]="chartDataCountControl" min="1" />
+      </label>
+    </mat-form-field>
+  </mat-card-footer>
 </mat-card>
