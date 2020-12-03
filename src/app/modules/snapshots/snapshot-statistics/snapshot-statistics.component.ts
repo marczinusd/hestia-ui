@@ -90,4 +90,8 @@ export class SnapshotStatisticsComponent implements OnInit, OnDestroy {
     this.gridApi = $event.api;
     this.columnApi = $event.columnApi;
   }
+
+  exportToCsv() {
+    this.gridApi.exportDataAsCsv();
+  }
 }

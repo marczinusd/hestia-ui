@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { createRoutingFactory, Spectator } from '@ngneat/spectator/jest';
 import { AgGridModule } from 'ag-grid-angular';
-import { ColDef, ColumnApi, GridApi, RowDoubleClickedEvent } from 'ag-grid-community';
+import { ColDef, ColumnApi, CsvExportParams, GridApi, RowDoubleClickedEvent } from 'ag-grid-community';
 import { of } from 'rxjs';
 import { TestScheduler } from 'rxjs/testing';
 
@@ -49,7 +49,9 @@ describe('SnapshotStatisticsComponent', () => {
         autoSizeAllColumns: () => {}
       } as ColumnApi,
       api: {
-        sizeColumnsToFit: () => {}
+        sizeColumnsToFit: () => {},
+        exportDataAsCsv: () => {},
+        exportDataAsExcel: () => {}
       } as GridApi,
       type: ''
     });
@@ -68,6 +70,32 @@ describe('SnapshotStatisticsComponent', () => {
     callback({ data: mockFile });
 
     expect(filesService.selectActive).toHaveBeenCalledWith(mockFile.id);
+  });
+
+  it('should use gridApi.exportDataAsCsv() when export to csv button is pressed', () => {
+    const query = spectator.inject(SnapshotsQuery);
+    query.activeId$ = of('1');
+    const filesService = spectator.inject(FilesService);
+    filesService.getAllFilesForSnapshot.andReturn(of([mockFile]));
+
+    let exportAsCsvInvoked = false;
+    spectator.component.gridReady({
+      columnApi: {
+        autoSizeAllColumns: () => {}
+      } as ColumnApi,
+      api: {
+        sizeColumnsToFit: () => {},
+        exportDataAsCsv: () => {
+          exportAsCsvInvoked = true;
+        }
+      } as GridApi,
+      type: ''
+    });
+    spectator.detectChanges();
+
+    spectator.click(spectator.query('#export-to-csv-button'));
+
+    expect(exportAsCsvInvoked).toBeTruthy();
   });
 
   it('should set rowData correctly', () => {

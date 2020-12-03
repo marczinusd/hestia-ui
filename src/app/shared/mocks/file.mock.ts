@@ -10,5 +10,6 @@ export const mockFile: File = {
   lines: mockLines,
   id: 'id',
   coveragePercentage: 100,
-  lifetimeAuthors: 5
+  lifetimeAuthors: 5,
+  lineCount: mockLines.length
 };
