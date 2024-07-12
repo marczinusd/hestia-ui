@@ -34,7 +34,7 @@
     "@angular/router": "^11.0.0",
     "@datorama/akita": "^5.2.5",
     "ag-grid-angular": "^24.1.0",
-    "ag-grid-community": "^24.1.0",
+    "ag-grid-community": "^32.0.1",
     "chart.js": "^2.9.4",
     "chartjs": "^0.3.24",
     "chartjs-plugin-annotation": "^0.5.7",
